@@ -1,0 +1,3 @@
+full/daon/site_data/shop_product_mst/1688436031_tyO1MAxg_3.jpg | phone on filter label fine print, ~"1588-8899" (blurry, probable) | 254,464,44,18 | 600x600
+full/daon/site_data/shop_product_mst/1742448463_ypgJNcS0_1721696611.jpg | tiny phone-like line on BLUEMON sticker (illegible, possible number) | 440,339,32,10 | 600x600
+full/daon/site_data/shop_product_mst/1742448463_m1qwshVD_1721696611.jpg | tiny phone-like line on BLUEMON sticker (illegible, possible number) | 440,339,32,10 | 600x600

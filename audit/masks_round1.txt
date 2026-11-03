@@ -1,0 +1,33 @@
+full/ext/AC-12R10FNW_spec.jpg | 1588-8899 | 249,1275,167,30 | 1000x2518 | white
+full/ext/ND-A0610FG_img_aroma.jpg | 1588-8899(AS) | 589,7445,139,29 | 900x7860 | white
+full/ext/ND-A0610FG_img_aroma.jpg | 055-380-0700 (tiny, curved white text on can label; approx box, also clips edges of adjacent label lines) | 299,3740,63,28 | 900x7860 | 0xe5846b
+full/ext/CP-U011W_img.jpg | http://www.cuckoo.co.kr/customer/center.aspx | 127,10351,620,35 | 1200x12049 | 0xf6f6f6
+full/ext/CP-U011W_img.jpg | 1588-8899(AS) | 736,11688,142,28 | 1200x12049 | white
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 1, top photo) | 201,2508,26,11 | 1200x12049 | 0xf4f5f4
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 2, top photo) | 549,2510,26,11 | 1200x12049 | 0xf4f4f4
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 3, top photo) | 888,2510,26,11 | 1200x12049 | 0xf4f4f5
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 1, bottom photo) | 345,4305,37,11 | 1200x12049 | 0xe9eaea
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 2, bottom photo) | 567,4307,37,11 | 1200x12049 | 0xf4f4f4
+full/ext/CP-U011W_img.jpg | 1577-0010 (filter label 3, bottom photo) | 789,4297,39,11 | 1200x12049 | 0xebebeb
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 1, top photo) | 268,2455,22,10 | 1200x12049 | 0xc2c2c2
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 2, top photo) | 616,2456,22,10 | 1200x12049 | 0xc3c3c3
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 3, top photo) | 958,2457,23,10 | 1200x12049 | 0xc3c3c2
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 1, bottom photo) | 443,4230,29,12 | 1200x12049 | 0xbababa
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 2, bottom photo) | 665,4233,29,12 | 1200x12049 | 0xc2c2c2
+full/ext/CP-U011W_img.jpg | (02) 457-xxxx manufacturer phone, OPTIONAL (filter label 3, bottom photo) | 889,4220,29,12 | 1200x12049 | 0xb3b3b3
+full/ext/CP-ABS100G_img_1.jpg | 1588-8899 | 465,20216,110,23 | 676x21100 | white
+full/ext/CP-TS100_spec.jpg | 1588-8899(AS) | 694,1354,114,24 | 1200x2252 | white
+full/ext/NW-BS150UW_spec.jpg | 1588-8899 | 602,951,88,21 | 900x1263 | white
+full/site_data/file/notice/2022/03/1648713293_LvyRnPZU_EBAA85ED92.jpg | 다이렉트몰 (in 다이렉트몰을; 을 starts at x347) | 208,914,138,35 | 1080x1575 | 0xfefef6
+full/site_data/file/notice/2022/03/1648713293_LvyRnPZU_EBAA85ED92.jpg | ( 010-8***-2*** ) incl. parentheses | 388,1296,306,53 | 1080x1575 | white
+full/modules/user/img/skin01/shop/tasa_130_10.jpg | large QR code | 222,308,31,28 | 1000x918 | white
+full/modules/user/img/skin01/shop/tasa_130_10.jpg | small QR code + its adjacent 3-line text | 219,390,32,13 | 1000x918 | white
+full/modules/user/img/skin01/shop/tasa_130_10.jpg | 1588-1588 | 219,413,34,10 | 1000x918 | white
+full/modules/user/img/skin01/sub/B2B_Title.jpg | 다이렉트 (in 다이렉트B2B) | 60,126,184,55 | 1200x300 | 0x141416
+full/modules/user/img/skin01/shop/event_title_banner.jpg | 다이렉트 | 378,49,110,34 | 1200x200 | 0x1e8bd6
+full/site_data/banner_mst/1622161551_5t04UrKS_topbanner0.jpg | 다이렉트 (in 다이렉트라서, small line) | 19,38,58,20 | 266x384 | 0xa9b4b9
+full/site_data/banner_mst/1622161551_5t04UrKS_topbanner0.jpg | 다이렉트 (large headline) | 19,74,92,28 | 266x384 | 0xa9b4b9
+full/site_data/banner_mst/1659081972_L6KNSslv_topbanner1.jpg | 다이렉트몰 (in 다이렉트몰에서) | 189,164,64,18 | 1200x200 | 0xe6e5e3
+full/site_data/banner_mst/1662432639_B3raMWHb_middleeven.jpg | 다이렉트 | 167,76,127,41 | 1200x200 | 0xf8f8f8
+full/site_data/banner_mst/1662531938_WEUozvuA_main01.jpg | 다이렉트 | 70,108,131,42 | 875x320 | 0xcc3638
+full/site_data/banner_mst/1662531938_zywxneoi_main03.jpg | 다이렉트로 | 70,108,163,40 | 875x320 | 0x7d45a2

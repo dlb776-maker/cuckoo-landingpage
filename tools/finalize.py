@@ -19,6 +19,20 @@ FOOTER = '''<p class="dcAddr02">
           '''
 
 TEXT = [
+    ("$('.dcReviewListWrap').offset().top", "($('.dcReviewListWrap').offset()||{top:1e9}).top"),  # pages without reviews threw on every scroll
+    ('다이렉트 상담신청', '빠른 상담신청'), ('다이렉트 빠른설치', '빠른설치 신청'),
+    ('"url": "www.cuckoo-rentalmall.co.kr"', '"url": "/"'),
+    ("domain:'.cuckoo-rentalmall.co.kr', ", ''), ("goto_url('/muser')", "goto_url('/')"), ('href="/muser"', 'href="/"'),
+    ('회사 : 다이렉트렌탈', '회사 : 주식회사 파이브스톤'), ('다이렉트렌탈', '파이브스톤'),
+    ('다이렉트접수처', '파이브스톤 접수처'), ('다이렉트 접수처', '파이브스톤 접수처'),
+    ('쿠쿠전자 다이렉트 렌탈몰', '파이브스톤 렌탈몰'), ('쿠쿠전자 다이렉트<br />렌탈몰', '파이브스톤<br />렌탈몰'),
+    ('쿠쿠전자<br />다이렉트몰', '파이브스톤<br />렌탈몰'), ('쿠쿠전자 다이렉트몰', '파이브스톤 렌탈몰'), ('다이렉트몰', '파이브스톤 렌탈몰'),
+    ("<p class='brand_nm'>쿠쿠전자 다이렉트</p>", "<p class='brand_nm'>파이브스톤</p>"),
+    ('다온 이벤트', '이벤트'), ('(다온은', '(당사는'),
+    # other companies' numbers: removed, per owner's call
+    ('1588-8899(AS), ', ''), ('1588-8900(AS), ', ''), ('1588-8899(AS)', ''), ('1588-8900(AS)', ''),
+    ('A/S 고객센터: 1588-8899', 'A/S 고객센터'), ('1588-8899', ''), ('1588-8900', ''),
+    ('1588-9260', ''), ('1577-8045', ''), ('02-1800-6611', ''),
     ('1566-1134', PHONE), ('1566 - 1134', PHONE), ('15661134', PHONE.replace('-', '')),
     ('050-2350-1134', PHONE),
     ('196-38-00677', '108-86-16983'), ('410-87-05732', '108-86-16983'),
@@ -59,14 +73,40 @@ def fix_url(m):
 
 ABS = re.compile(r"""(["'(=])https?://(?:www\.)?cuckoo-rentalmall\.co\.kr(/[^"'\s)<>\\]*)""")
 ROOTREL = re.compile(r"""(["'])(/user(?:[/?][^"'\s<>\\]*)?)(?=["'])""")  # root-relative URLs in attributes and JS strings
-EXT = re.compile(r"https?://www\.daonhomesys\.com/site_data/[a-z_]+/([^\"'\s)<>]+)")
+DAON = re.compile(r"https?://(?:www\.)?daonhomesys\.com/([^\"'\s)<>]+)")
+
+def daon_url(m):
+    # images that lived on the original seller's server; served from /daon (full path) or /ext (older flat copies)
+    p = m[1]
+    if os.path.isfile(os.path.join(DST, 'daon', unquote(p))):
+        return '/daon/' + p
+    if os.path.isfile(os.path.join(DST, 'ext', p.rsplit('/', 1)[-1])):
+        return '/ext/' + p.rsplit('/', 1)[-1]
+    if p.lower().endswith(('.mp4', '.webm', '.mov')):
+        return m[0]  # shortcut: videos over Vercel's 100MB limit stay remote; re-encode them if they must be local
+    return 'data:image/gif;base64,R0lGODlhAQABAAAAACw='  # image gone upstream too: blank pixel, no link to the old host
+
+TRACKERS = [
+    re.compile(r'<meta name="(?:google|naver)-site-verification"[^>]*>\s*'),
+    re.compile(r'<script[^>]*src="(?:https?:)?//(?:www\.googletagmanager\.com|t1\.daumcdn\.net/kas|cdn\.onetag\.co\.kr|wcs\.naver\.net)[^"]*"[^>]*></script>\s*'),
+    re.compile(r"<script>\s*window\.dataLayer[^<]*</script>\s*"),
+]
+# the original operator's analytics are stripped; these stubs keep leftover calls (kakaoPixel(...).x(), wcs_do()) from throwing
+STUBS = ('<script>window.kakaoPixel=function(){return new Proxy({},{get:function(){return function(){};}});};'
+         'window.wcs=new Proxy({},{get:function(){return function(){};}});window.wcs_add={};window.wcs_do=function(){};'
+         'window.gtag=function(){};</script>')
 
 def transform(s):
+    for t in TRACKERS:
+        s = t.sub('', s)
+    s = re.sub(r'(<head[^>]*>)', lambda m: m[1] + STUBS, s, count=1)
     s = re.sub(r"https?://(?:www\.)?cuckoo-rentalmall\.co\.kr(?=[\"'])", '/', s)
     s = ABS.sub(fix_url, s)
     s = ROOTREL.sub(fix_url, s)
     # shortcut: files over Vercel's 100MB limit stay on the original host; re-encode them if they must be local
-    s = EXT.sub(lambda m: '/ext/' + m[1] if os.path.isfile(os.path.join(DST, 'ext', m[1])) else m[0], s)
+    s = DAON.sub(daon_url, s)
+    # nothing may point back at the original site; leftovers become same-path local URLs
+    s = re.sub(r'https?://(?:www\.)?cuckoo-rentalmall\.co\.kr(?=/)', '', s)
     # popups load per-id pages by string concat; point them at the saved copies
     s = s.replace('"/user/product_detail/ajax_rev_view_html?review_no="+review_no', '"/user/product_detail/ajax_rev_view_html%3Freview_no="+review_no+".html"')
     s = s.replace('"/user/sub5011/detail?gift_no="+gift_no+"&call_type="+call_type', '"/user/sub5011/detail%3Fgift_no="+gift_no+"&call_type="+call_type+".html"')
@@ -84,10 +124,21 @@ def transform(s):
 if os.path.exists(DST):
     shutil.rmtree(DST)
 shutil.copytree(SRC, DST)
+# wget saved query-string assets as 'x.css?v.css'; pages that request 'x.css?v' get served 'x.css'
+for d, _, fs in os.walk(DST):
+    for f in fs:
+        if '?' in f and not f.startswith(('review', 'product_', 'ajax_', 'detail', 'sub3011')):
+            plain = os.path.join(d, f.split('?')[0])
+            if not os.path.exists(plain):
+                shutil.copyfile(os.path.join(d, f), plain)
 for f in os.listdir(os.path.join(DST, 'ext')):
     if os.path.getsize(os.path.join(DST, 'ext', f)) > 95 * 2**20:
         os.remove(os.path.join(DST, 'ext', f))
 shutil.copyfile(os.path.join(DST, 'user.html'), os.path.join(DST, 'index.html'))
+shutil.copyfile(os.path.join(DST, 'favicon.ico'), os.path.join(DST, 'favicon.png'))
+os.remove(os.path.join(DST, 'user/review/view'))
+os.remove(os.path.join(DST, 'user/sub4020/edit_btob.html'))  # empty wget artifact
+shutil.copyfile(os.path.join(os.path.dirname(__file__), '404.html'), os.path.join(DST, '404.html'))  # stray wget copy without .html, never linked
 shutil.copyfile(os.path.join(os.path.dirname(__file__), 'mock.js'), os.path.join(DST, 'common/js/mock.js'))
 n = 0
 for d, _, fs in os.walk(DST):

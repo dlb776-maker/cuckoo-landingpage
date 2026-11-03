@@ -10,3 +10,6 @@ full/ext/1670978098_CJ3nk8py_2022121319.mp4
 *.MP4
 *.mov
 *.webm
+orig_images/
+audit/check/
+audit/boxes_tmp/

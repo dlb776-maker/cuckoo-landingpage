@@ -1,0 +1,7 @@
+full/ext/CP-TS100_spec.jpg | A/S 1588-8899(AS) | ~1365px (bottom of spec table, middle of image) | no
+full/ext/ND-A0610FG_img.jpg | A/S 1588-8899 | ~25260px (spec table near bottom) | no
+full/site_data/banner_mst/1622161551_5t04UrKS_topbanner0.jpg | 다이렉트라서 저렴하고 편리한 / 다이렉트 쿠쿠전자렌탈 (seller name) | top | yes
+full/site_data/banner_mst/1659081972_L6KNSslv_topbanner1.jpg | 가장 믿을 수 있는 다이렉트몰에서 렌탈하고 관리받으세요! | bottom-left (~170px) | no
+full/site_data/banner_mst/1662432639_B3raMWHb_middleeven.jpg | 쿠쿠 다이렉트 렌탈 | middle | yes
+full/site_data/banner_mst/1662531938_WEUozvuA_main01.jpg | 다이렉트 렌탈 전 고객 최고급 사은품 증정 | middle | yes
+full/site_data/banner_mst/1662531938_zywxneoi_main03.jpg | 다이렉트로 친절한 무료 상담 받으세요! | middle | yes

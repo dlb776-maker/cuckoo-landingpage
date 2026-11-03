@@ -1,0 +1,268 @@
+- generic [ref=f1046e2]:
+  - generic:
+    - link "본문으로 바로가기" [ref=f1046e3] [cursor=pointer]:
+      - /url: view%3Freview_no=20241113-111390&page=5&cate_no=12.html#diContent
+    - link "글로벌메뉴로 바로가기" [ref=f1046e4] [cursor=pointer]:
+      - /url: view%3Freview_no=20241113-111390&page=5&cate_no=12.html#diGnb
+    - link "로컬메뉴로 바로가기" [ref=f1046e5] [cursor=pointer]:
+      - /url: view%3Freview_no=20241113-111390&page=5&cate_no=12.html#diNav
+    - link "연락처 및 저작권으로 바로가기" [ref=f1046e6] [cursor=pointer]:
+      - /url: view%3Freview_no=20241113-111390&page=5&cate_no=12.html#diFooter
+  - article [ref=f1046e7]:
+    - listitem [ref=f1046e9]:
+      - link [ref=f1046e10] [cursor=pointer]:
+        - /url: ../../user.html
+        - img "배너파일_1" [ref=f1046e11]
+  - banner [ref=f1046e12]:
+    - generic [ref=f1046e14]:
+      - generic [ref=f1046e15]:
+        - textbox "검색어를 입력하세요." [ref=f1046e16]
+        - button "검색" [ref=f1046e17] [cursor=pointer]
+      - heading [level=1] [ref=f1046e18]:
+        - link [ref=f1046e19] [cursor=pointer]:
+          - /url: ../../user.html
+          - img "파이브스톤 로고" [ref=f1046e20]
+      - generic [ref=f1046e23]:
+        - list:
+          - listitem [aria-hidden] [ref=f1046e24]:
+            - link [ref=f1046e25] [cursor=pointer]:
+              - /url: /404
+          - listitem [ref=f1046e27]:
+            - link [ref=f1046e28] [cursor=pointer]:
+              - /url: ../sub5014.html
+              - img "배너파일_1" [ref=f1046e29]
+          - listitem [aria-hidden] [ref=f1046e30]:
+            - link [ref=f1046e31] [cursor=pointer]:
+              - /url: ../product_list/run/category_no/10.html
+          - listitem [aria-hidden] [ref=f1046e33]:
+            - link [ref=f1046e34] [cursor=pointer]:
+              - /url: /404
+          - listitem [aria-hidden] [ref=f1046e36]:
+            - link [ref=f1046e37] [cursor=pointer]:
+              - /url: ../sub5011.html
+          - listitem [aria-hidden] [ref=f1046e39]:
+            - link [ref=f1046e40] [cursor=pointer]:
+              - /url: /404
+          - listitem [aria-hidden] [ref=f1046e42]:
+            - link [ref=f1046e43] [cursor=pointer]:
+              - /url: ../sub5014.html
+    - generic [ref=f1046e46]:
+      - navigation:
+        - list:
+          - listitem [ref=f1046e47]:
+            - link [ref=f1046e48] [cursor=pointer]:
+              - /url: ../best_product.html
+          - listitem [ref=f1046e50]:
+            - link "11월 특가할인" [ref=f1046e51] [cursor=pointer]:
+              - /url: ../sale_product.html
+          - listitem [ref=f1046e52]:
+            - link "제품보기" [ref=f1046e53] [cursor=pointer]:
+              - /url: ../product_list/run/category_no/10.html
+          - listitem [ref=f1046e54]:
+            - link "온라인 무료상담" [ref=f1046e55] [cursor=pointer]:
+              - /url: /404
+          - listitem [ref=f1046e56]:
+            - link "고객센터" [ref=f1046e57] [cursor=pointer]:
+              - /url: ../board/lists/board_cd/notice.html
+          - listitem [ref=f1046e58]:
+            - link "이달의혜택" [ref=f1046e59] [cursor=pointer]:
+              - /url: ../sub5011.html
+  - article [ref=f1046e60]:
+    - generic [ref=f1046e62]:
+      - generic [ref=f1046e63]:
+        - generic [ref=f1046e65]:
+          - generic [ref=f1046e66]:
+            - generic [ref=f1046e67]: "[CBT-E1021W] ㅋㅋ빠른설치!"
+            - generic [ref=f1046e68]: 2021.06.21
+          - generic [ref=f1046e69]:
+            - paragraph [ref=f1046e70]
+            - generic [ref=f1046e72]: 설치가 빨라서 좋았어요 상담하시는분도 친절하시고 ~ 겨울이라 화장실이 너무 춥더라구요ㅠ 여러군데 알아봤지만 쿠쿠하면 뭔가 믿음이 가서 설치받았어요! 굿굿
+        - list [ref=f1046e75]:
+          - listitem [ref=f1046e76]:
+            - link "목록" [ref=f1046e77] [cursor=pointer]:
+              - /url: ../review%3F&page=5&cate_no=12.html
+      - generic [ref=f1046e79]:
+        - heading "쿠쿠 주요 고객사" [level=3] [ref=f1046e80]
+        - paragraph [ref=f1046e81]: 생활의 쿠쿠, 지속적인 품질의 고급화와 기술력 혁신을 통하여 글로벌 기업으로서 비전을 실현해가고 있습니다.
+        - list:
+          - listitem [ref=f1046e82]:
+            - img "company_1.jpg" [ref=f1046e83]
+          - listitem [ref=f1046e84]:
+            - img "company_2.jpg" [ref=f1046e85]
+          - listitem [ref=f1046e86]:
+            - img "company_3.jpg" [ref=f1046e87]
+          - listitem [ref=f1046e88]:
+            - img "company_4.jpg" [ref=f1046e89]
+          - listitem [ref=f1046e90]:
+            - img "company_5.jpg" [ref=f1046e91]
+          - listitem [ref=f1046e92]:
+            - img "company_6.jpg" [ref=f1046e93]
+          - listitem [ref=f1046e94]:
+            - img "company_7.jpg" [ref=f1046e95]
+          - listitem [ref=f1046e96]:
+            - img "company_8.jpg" [ref=f1046e97]
+          - listitem [ref=f1046e98]:
+            - img "company_9.jpg" [ref=f1046e99]
+          - listitem [ref=f1046e100]:
+            - img "company_10.jpg" [ref=f1046e101]
+          - listitem [ref=f1046e102]:
+            - img "company_11.jpg" [ref=f1046e103]
+          - listitem [ref=f1046e104]:
+            - img "company_12.jpg" [ref=f1046e105]
+          - listitem [ref=f1046e106]:
+            - img "company_13.jpg" [ref=f1046e107]
+          - listitem [ref=f1046e108]:
+            - img "company_14.jpg" [ref=f1046e109]
+          - listitem [ref=f1046e110]:
+            - img "company_15.jpg" [ref=f1046e111]
+          - listitem [ref=f1046e112]:
+            - img "company_16.jpg" [ref=f1046e113]
+          - listitem [ref=f1046e114]:
+            - img "company_17.jpg" [ref=f1046e115]
+          - listitem [ref=f1046e116]:
+            - img "company_18.jpg" [ref=f1046e117]
+      - list [ref=f1046e121]:
+        - list [ref=f1046e123]:
+          - listitem [ref=f1046e124]:
+            - link [ref=f1046e125] [cursor=pointer]:
+              - /url: ../board/lists/board_cd/faqs.html
+              - img "배너파일_1" [ref=f1046e126]
+          - listitem [ref=f1046e127]:
+            - link [ref=f1046e128] [cursor=pointer]:
+              - /url: ../product_list/run/category_no/10.html
+              - img "배너파일_2" [ref=f1046e129]
+          - listitem [ref=f1046e130]:
+            - link [ref=f1046e131] [cursor=pointer]:
+              - /url: ../sub5011.html
+              - img "배너파일_3" [ref=f1046e132]
+        - listitem [ref=f1046e133]:
+          - paragraph [ref=f1046e134]:
+            - img "쿠쿠" [ref=f1046e135]
+          - paragraph [ref=f1046e136]: 070-8652-7471
+          - paragraph [ref=f1046e137]: 고객님께 가장 알맞은 제품으로친절하게 상담드리겠습니다.
+  - contentinfo [ref=f1046e138]:
+    - generic [ref=f1046e139]:
+      - generic:
+        - link "홈으로" [ref=f1046e140] [cursor=pointer]:
+          - /url: ../../user.html
+        - link "이용약관" [ref=f1046e141] [cursor=pointer]:
+          - /url: ../clause_agree.html
+        - link "개인정보처리방침" [ref=f1046e142] [cursor=pointer]:
+          - /url: ../clause_private.html
+        - listitem:
+          - link "관리자 로그인" [ref=f1046e143] [cursor=pointer]:
+            - /url: /404
+    - generic [ref=f1046e145]:
+      - paragraph [ref=f1046e146]: Customer Center 070-8652-7471 쿠쿠홈시스 공식 온라인 전속점 입니다
+      - paragraph [ref=f1046e147]: "주식회사 파이브스톤 / 06568 서울 서초구 동광로12가길 3 5층 (방배동, 인재빌딩) 사업자번호 : 108-86-16983 통신판매번호 : 2022-서울서초-0664 대표자 : 신성연 대표번호 : 070-8652-7471 E-MAIL : shin299fa@naver.com 전화번호 : 070-8652-7471"
+      - paragraph [ref=f1046e148]: COPYRIGHT © 쿠쿠홈시스 All Right Reserved.
+  - article [ref=f1046e149]:
+    - list [ref=f1046e151]:
+      - listitem [ref=f1046e152]: 렌탈 상담센터 070-8652-7471 통화량이 많아 전화연결이 안될 시 무료상담이나 카톡상담을 이용해 주세요.
+      - listitem [ref=f1046e153]:
+        - text: 성명
+        - textbox "이름" [ref=f1046e154]
+        - text: 연락처
+        - textbox "'-' 제외 연락처를 남겨주세요" [ref=f1046e155]:
+          - /placeholder: " '-' 제외 연락처를 남겨주세요"
+        - checkbox "개인정보 수집 및 이용 동의(필수)" [checked] [ref=f1046e156]
+        - text: 개인정보 수집 및 이용 동의(필수)
+        - link "[상세보기]" [ref=f1046e157] [cursor=pointer]:
+          - /url: javascript:void 0;
+      - listitem [ref=f1046e158]:
+        - button "상담 신청" [ref=f1046e159] [cursor=pointer]
+  - article [ref=f1046e160]:
+    - list [ref=f1046e161]:
+      - listitem [ref=f1046e162]:
+        - link "렌탈상담" [ref=f1046e163] [cursor=pointer]:
+          - /url: javascript:f_free_request();
+      - listitem [ref=f1046e164]:
+        - link "전화상담" [ref=f1046e165] [cursor=pointer]:
+          - /url: javascript:f_call_request_show();
+      - listitem [ref=f1046e166]:
+        - generic [ref=f1046e167] [cursor=pointer]: 가입후기
+      - listitem [ref=f1046e168]:
+        - button "위로" [ref=f1046e169] [cursor=pointer]
+  - article [ref=f1046e170]:
+    - button "메뉴접기" [ref=f1046e171] [cursor=pointer]
+    - button "위로" [ref=f1046e172] [cursor=pointer]
+    - button "아래로" [ref=f1046e173] [cursor=pointer]
+    - generic [ref=f1046e174]:
+      - list [ref=f1046e175]:
+        - heading "CATEGORY" [level=3] [ref=f1046e177]
+        - listitem [ref=f1046e178] [cursor=pointer]:
+          - link "패키지" [ref=f1046e179]:
+            - /url: ../product_list/run/category_no/23.html
+        - listitem [ref=f1046e180] [cursor=pointer]:
+          - link "커피정수기" [ref=f1046e181]:
+            - /url: ../product_list/run/category_no/30.html
+        - listitem [ref=f1046e182] [cursor=pointer]:
+          - link "얼음정수기" [ref=f1046e183]:
+            - /url: ../product_list/run/category_no/35.html
+        - listitem [ref=f1046e184] [cursor=pointer]:
+          - link "정수기" [ref=f1046e185]:
+            - /url: ../product_list/run/category_no/10.html
+        - listitem [ref=f1046e186] [cursor=pointer]:
+          - link "비데" [ref=f1046e187]:
+            - /url: ../product_list/run/category_no/12.html
+        - listitem [ref=f1046e188] [cursor=pointer]:
+          - link "연수기" [ref=f1046e189]:
+            - /url: ../product_list/run/category_no/77.html
+        - listitem [ref=f1046e190] [cursor=pointer]:
+          - link "공기청정기" [ref=f1046e191]:
+            - /url: ../product_list/run/category_no/11.html
+        - listitem [ref=f1046e192] [cursor=pointer]:
+          - link "주방가전" [ref=f1046e193]:
+            - /url: ../product_list/run/category_no/14.html
+        - listitem [ref=f1046e194] [cursor=pointer]:
+          - link "생활가전" [ref=f1046e195]:
+            - /url: ../product_list/run/category_no/15.html
+        - listitem [ref=f1046e196] [cursor=pointer]:
+          - link "가구" [ref=f1046e197]:
+            - /url: ../product_list/run/category_no/20.html
+        - listitem [ref=f1046e198] [cursor=pointer]:
+          - link "건강/뷰티" [ref=f1046e199]:
+            - /url: ../product_list/run/category_no/16.html
+        - listitem [ref=f1046e200] [cursor=pointer]:
+          - link "홈케어&방역" [ref=f1046e201]:
+            - /url: ../product_list/run/category_no/26.html
+        - listitem [ref=f1046e202] [cursor=pointer]:
+          - link "펫용품" [ref=f1046e203]:
+            - /url: ../product_list/run/category_no/18.html
+        - heading "COMMUNITY" [level=3] [ref=f1046e204]
+        - listitem [ref=f1046e205] [cursor=pointer]:
+          - link "렌탈후기" [ref=f1046e206]:
+            - /url: ../review.html
+        - listitem [ref=f1046e207] [cursor=pointer]:
+          - text: 가입 후기
+          - generic [ref=f1046e208]: 냉장고 추첨
+        - listitem [ref=f1046e210] [cursor=pointer]:
+          - link "제휴카드안내" [ref=f1046e211]:
+            - /url: ../sub5014.html
+        - listitem [ref=f1046e212] [cursor=pointer]:
+          - link "사업자/단체 견적 할인" [ref=f1046e213]:
+            - /url: ../sub4020.html
+        - listitem [ref=f1046e214] [cursor=pointer]:
+          - link "공지사항" [ref=f1046e215]:
+            - /url: ../board/lists/board_cd/notice.html
+        - heading "CUSTOMER PAGE" [level=3] [ref=f1046e216]
+        - listitem [ref=f1046e217] [cursor=pointer]:
+          - link "실시간 온라인 접수 현황" [ref=f1046e218]:
+            - /url: ../sub3011.html
+        - listitem [ref=f1046e219] [cursor=pointer]:
+          - link "무료상담 신청현황" [ref=f1046e220]:
+            - /url: /404
+        - heading "CS CENTER" [level=3] [ref=f1046e221]
+        - paragraph [ref=f1046e222]: 070-8652-7471
+        - paragraph [ref=f1046e223]: 평일 09:00 ~ 18:00(점심시간 12:00 ~ 13:00)
+      - generic [ref=f1046e224]:
+        - heading "최근본 제품" [level=3] [ref=f1046e225]
+        - list [ref=f1046e226]:
+          - listitem [ref=f1046e227]:
+            - link [ref=f1046e228] [cursor=pointer]:
+              - /url: ../product_detail%3Fproduct_no=202206-1164.html
+              - img "AC-12R10FNW" [ref=f1046e229]
+          - listitem [ref=f1046e230]:
+            - link [ref=f1046e231] [cursor=pointer]:
+              - /url: ../product_detail%3Fproduct_no=202103-0252.html
+              - img "AC-20T10FWH" [ref=f1046e232]
