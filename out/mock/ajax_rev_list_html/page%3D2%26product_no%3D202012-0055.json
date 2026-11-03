@@ -1,0 +1,256 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="2" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">류*희</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">디자인이 심플해서 맘에 듭니다.                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.27</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">디자인 참 깔끔해서 저희집 인테리어에도 튀지않고 좋습니다. 물이 흘러서 애기도 좋아하는 것 같네요. 만족.<br/><br/><span onClick="f_rev_detail('20241113-112342')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="/ext/1608193794_25oYlO3G_jovoli1812.jpg" alt="" onClick="f_rev_detail('20241113-112342')" style='max-height:180px;'>
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">권*빈</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">무선으로도 쓸 수 있어서                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.27</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">입이 닿는곳이 스테인리스로 되어있어서 확실히 더 안심되고 더 깨끗한 느낌이 들어용!그리고 물이 계속 찰랑찰랑 나오니까 저도 한 번씩 눈길이 가는데.. 저희집 고양이들도 그런지 처음에 계속 그 주위에 있더라구용 ㅋㅋㅋㅋ분리도 쉽고 무선으로도 쓸 수 있어서 콘센트 없는곳에서도 미리 충전만 해놓으면 쓸 수 있…<br/><br/><span onClick="f_rev_detail('20241113-112333')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">강*은</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">생각보다 조용하고 먼지 잘 걸러줘서 굿굿!                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.26</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span>
+      </div>
+      <div >
+        <p class="dcText">예상보다 조용하고 저희집 고양이가 관심이 가는지 멍을 때려도 급수기 앞에서 하더라구요~ㅋㅋㅋㅋㅋㅋ세척하다보니 먼지도 잘 걸러주는 것 같아서 설치하길 잘한 것 같아요 굿굿!<br/><br/><span onClick="f_rev_detail('20241113-112300')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="/ext/1608192310_ki1P6F8z_E38588E384.jpg" alt="" onClick="f_rev_detail('20241113-112300')" style='max-height:180px;'>
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">임*연</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">쿠쿠정도면 믿고 쓸만 한듯                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.25</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">반려동물 용품이 요즘 엄청 많던데 그래도 이름 있는 곳인 걸 쓰는 게 나을것 같아 쿠쿠 넬로껄로 주문했습니다 디자인이나 색상도 깔끔하고 생각보다 기능이 좋아서 마음에 쏙 드네요 진짜 깨끗한 물 먹일 수 있는 것 같아 너무 안심됩니다<br/><br/><span onClick="f_rev_detail('20241113-112258')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">주*영</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">넘넘 만족~~~~^^                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.25</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">스마트모드로 쓰니까 한 2~3일 정도에 한 번씩 충전하고 있네용~~ㅎㅎㅎㅎ 맨날 코드 꼽고 있어야하나 했는뎅... 충전식으로 사용할 수 있어서 넘넘 만족중~~^^<br/><br/><span onClick="f_rev_detail('20241113-112248')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="/ext/1608194733_QuSPwXo5_w4tws.jpg" alt="" onClick="f_rev_detail('20241113-112248')" style='max-height:180px;'>
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">권*향</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">맘에 쏙!드네요~^^                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.24</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span>
+      </div>
+      <div >
+        <p class="dcText">요즘에 애완용품이 엄청 나오길래 고심해서 넬로껄로 설치받았는데 넘넘 좋은 거 있죠~?ㅎㅎㅎ 개울처럼 물이 계속 흘러나오니까 확실히 관심을 많이 가지더라고요~~^^스탠으로 되어있어서 긁힘같은 건 걱정 안되고 참 좋네요 완전 만족합니다^^<br/><br/><span onClick="f_rev_detail('20241113-112226')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">선*아</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">엄청 잘마셔요 대박대박!!                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.23</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">급수기 하나 둔 것뿐인데 촵촵 엄청 잘 마셔요!!ㅋㅋㅋ 플라스틱이 아니라 스테인리스로 되어있길래 식용유랑 베이킹소다로 한 번 세척해주고 쓰니까 훨씬 안심되고 변형될 걱정도 없ㅇ서ㅓ 더 좋은 것 같아요! 저는 물이 계속 흐른다고 하길래 좀 소음이 있겠다 싶었는데 소음 거의 안나서 처음에 신기했어요ㅋㅋㅋ 건…<br/><br/><span onClick="f_rev_detail('20241113-112192')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*빈</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">기능은 괜찮은데 세척을 자주해야할듯                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar4"></span>좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.23</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">스텐부분이 입에 닿다 보니까 세척을 꼭꼭 잘해주셔야 할 듯. 처음에 하얀 막이 생겨서 엄청 놀랬네요 그래서 매일매일 세척해주고 있습니다<br/><br/><span onClick="f_rev_detail('20241113-112190')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">이*주</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">좋은 제품 선택한 것 같아 뿌듯합니당!!                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.22</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">코드리스로 사용할 수 있으니까 더 안전하고 옮기면서 쓸 수 있어서 더 쓰기 좋습니당!!그리고 UV 살균이 된다길래 그냥 바로 설치해야겠다 생각 들었어용~~~!!저는 그냥 생수 시켜먹는데 그래도 더 좋은 물 마시는 것 같아서 ㅋㅋㅋㅋㅋㅋㅋㅋ 괜히 막 뿌듯하네여~ㅎㅎ<br/><br/><span onClick="f_rev_detail('20241113-112158')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="/ext/1608193687_UusTIK2p_safgaest.jpg" alt="" onClick="f_rev_detail('20241113-112158')" style='max-height:180px;'>
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">권*인</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">한 10일정도 써봤는데요^^                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.22</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">저희 애가 오히려 물이 안흐를때 더 잘 마셔서 스마트모드를 더 많이 쓰는 것 같네요~ 청소도 베이킹소다 써서 하면 되고 분리가 다 되니까 더 꼼꼼하게 설거지할 수 있어 맘에 듭니다^^ 전에 쓰던게 모터가 있어서 물때 끼는 게 너무 심했는데~ㅜㅜ 이건 그런게 없어서 좋아요~~<br/><br/><span onClick="f_rev_detail('20241113-112138')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&lt;</a><a href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">1</a><span class='dcSelectStep'>2</span><a href="/user/product_detail/run/page/3" onclick="f_rev_list(3);return false;">3</a><a id="pg_next"href="/user/product_detail/run/page/3"  onclick="f_rev_list(3);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/3"  onclick="f_rev_list(3);return false;">&raquo;</a></div>
+

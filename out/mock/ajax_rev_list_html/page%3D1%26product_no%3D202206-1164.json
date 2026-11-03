@@ -1,0 +1,37 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="1" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">오*규</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">아이들방에 딱입니다                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.11.02</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">신용카드</span>
+      </div>
+      <div >
+        <p class="dcText">기존 가습되는 청정기가 부피도크고 소음도있어서 조용한걸찾다가 가격 사이즈가 적당해서 결정했습니다카드할인찬스까지 공짜로 사용 ♡♡디자인 성능 대만족입니다<br/><br/><span onClick="f_rev_detail('20241113-112647')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="/ext/1672670816_FvOGNXV8_2023010223.jpg" alt="" onClick="f_rev_detail('20241113-112647')" style='max-height:180px;'>
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"></div>
+

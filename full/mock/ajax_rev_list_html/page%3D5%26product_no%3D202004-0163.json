@@ -1,0 +1,40 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="5" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">이*진</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">비데설치^^                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2024.12.18</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span>
+      </div>
+      <div >
+        <p class="dcText">얼마전 비데설치를 받았는데 좀 늦은 후기를 남깁니다<br />
+비데는 매번 쓰면서 느끼는거지만 특별한 기능은 필요없고 기본형이 저는 가장 좋더라구요<br />
+요즘에 살균이나 자동물내림이나 등등 이것저것 기능들이 추가가 되는데 비용도 비용이지만 많이 쓰는 기능은 아니라서요<br />
+제 개인적으로는 저렴…<br/><br/><span onClick="f_rev_detail('20241113-111398')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+              <img src="https://www.daonhomesys.com/site_data/shop_product_review/1586324977_loF2izb7_2001051689.jpg" alt="" onClick="f_rev_detail('20241113-111398')" style='max-height:180px;'>
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/4" onclick="f_rev_list(4);return false;">&lt;</a><a href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">1</a><a href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">2</a><a href="/user/product_detail/run/page/3" onclick="f_rev_list(3);return false;">3</a><a href="/user/product_detail/run/page/4" onclick="f_rev_list(4);return false;">4</a><span class='dcSelectStep'>5</span><a id="pg_next"href="/user/product_detail/run/page/5"  onclick="f_rev_list(5);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/5"  onclick="f_rev_list(5);return false;">&raquo;</a></div>
+

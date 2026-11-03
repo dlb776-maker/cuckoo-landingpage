@@ -1,0 +1,1 @@
+{"status":"OK","data":"<select id='term_no' name='term_no' style='font-size:16px;border-color:#ccc;border-radius: 5px;width:100%' onchange='f_term_change()'><option value='20260908-1105' selected >5\ub144\uc57d\uc815<\/option><option value='20260908-1107'  >6\ub144\uc57d\uc815<\/option><option value='20260908-1111'  >7\ub144\uc57d\uc815<\/option><\/select>","msg":""}

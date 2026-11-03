@@ -1,0 +1,12 @@
+.DS_Store
+.vercel
+deploy/
+audit/tiles_*/
+*.log
+missing.txt
+full/ext/1670977497_rGcljpnA_2022121319.mp4
+full/ext/1670978098_CJ3nk8py_2022121319.mp4
+*.mp4
+*.MP4
+*.mov
+*.webm

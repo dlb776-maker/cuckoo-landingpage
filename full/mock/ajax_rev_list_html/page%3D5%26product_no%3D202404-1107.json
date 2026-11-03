@@ -1,0 +1,204 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="5" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">허*영</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">다양한기능                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.25</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">맞춤출수도 되고 100도 뜨거운물도 되고 얼음까지 필요한 기능 다 있어서 너무 만족합니다~!!!남편도 잘골랐다고 하네요~^^<br/><br/><span onClick="f_rev_detail('20241113-112251')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">박*일</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">짱                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.25</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">좋아좋아~~잘쓸께요<br/><br/><span onClick="f_rev_detail('20241113-112250')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">유*영</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">굿                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.24</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">얼음양은 많고 소음은 적어서 완전만족중 <br/><br/><span onClick="f_rev_detail('20241113-112216')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">이*권</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">카드                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.24</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">제휴카드 발급받아서 쓰니 금액도 저렴해서 좋습니다.<br/><br/><span onClick="f_rev_detail('20241113-112215')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">박*순</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">쿠쿠만 씁니다                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.22</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">집에 공기청정기 밥솥 전부 쿠쿠쓰고 있는데 깔맞춤으로 정수기도 쿠쿠로했어요마침 얼음정수기 고민중이였는데 신제품나왔다해서 이거구나 하고 렌탈했답니다~가족들이 물맛도 좋다네요<br/><br/><span onClick="f_rev_detail('20241113-112148')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*연</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">ㅇㅇ                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.22</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span>
+      </div>
+      <div >
+        <p class="dcText">얼음에다가 100도씨 끓는물까지 나와서 너무 좋아요컵라면 먹을때도 편하고 시원한 아아타먹을때도 너무 편리하네요~<br/><br/><span onClick="f_rev_detail('20241113-112147')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">백*우</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">편리                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.21</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 6년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">마트에서 물 사서 마시다가 정수기 설치하니 정말 좋네요..왜 진작에 정수기 설치안했을까란 생각이 들정도로요..기대이상입니다<br/><br/><span onClick="f_rev_detail('20241113-112122')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">박*희</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">빠른설치                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.19</span>
+
+
+        
+      </p>
+      <p style='margin-bottom:20px;'><span style='background:#f7f7f7;padding:5px 20px;border-radius:50px;'>선택한 약정 : 5년</span></p>      <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">희망날짜에 빠르고 꼼꼼하게 설치해주셔서 너무 감사해요.선정리까지 완벽하네요<br/><br/><span onClick="f_rev_detail('20241113-112071')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/4" onclick="f_rev_list(4);return false;">&lt;</a><a href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">1</a><a href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">2</a><a href="/user/product_detail/run/page/3" onclick="f_rev_list(3);return false;">3</a><a href="/user/product_detail/run/page/4" onclick="f_rev_list(4);return false;">4</a><span class='dcSelectStep'>5</span><a id="pg_next"href="/user/product_detail/run/page/5"  onclick="f_rev_list(5);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/5"  onclick="f_rev_list(5);return false;">&raquo;</a></div>
+

@@ -1,0 +1,108 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="9" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">최*원</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">부모님댁에도 해드렸네요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.03</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span>
+      </div>
+      <div >
+        <p class="dcText">쿠쿠가 물맛이 좋아서 부모님댁에도 놔드렸는데 만족해하시네요저도만족입니다 좋아요<br/><br/><span onClick="f_rev_detail('20241113-111842')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">안*혁</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">셀프관리 도전.ㅎ                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.09.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">긴시간을 상담했는데 셀프관리로 결정했어요.ㅎ시간맞추기도 힘들고 셀프로하니 조금 더 저렴해서 이걸로결정지금까진 좋아요 굿<br/><br/><span onClick="f_rev_detail('20241113-111825')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*영</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">덕분에 따뜻하게 보내네요 ^^                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.09.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">끓인물로 올 겨울 따뜻하게 보낼수있어서 엄청 좋아요 ㅠ끓인물이어서 그런지 금방 식지도 않고걍 안쓸이유없음 ㅠㅠ<br/><br/><span onClick="f_rev_detail('20241113-111823')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*희</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">예뻐요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.09.25</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">어느 주방에 둬도 무던하게 잘 어울리는 정수기인것같네요셀프관리도 더 잘할수있을듯<br/><br/><span onClick="f_rev_detail('20241113-111803')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/8" onclick="f_rev_list(8);return false;">&lt;</a><a href="/user/product_detail/run/page/5" onclick="f_rev_list(5);return false;">5</a><a href="/user/product_detail/run/page/6" onclick="f_rev_list(6);return false;">6</a><a href="/user/product_detail/run/page/7" onclick="f_rev_list(7);return false;">7</a><a href="/user/product_detail/run/page/8" onclick="f_rev_list(8);return false;">8</a><span class='dcSelectStep'>9</span><a id="pg_next"href="/user/product_detail/run/page/9"  onclick="f_rev_list(9);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/9"  onclick="f_rev_list(9);return false;">&raquo;</a></div>
+

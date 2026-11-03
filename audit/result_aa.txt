@@ -1,0 +1,6 @@
+full/ext/AC-12R10FNW_spec.jpg | 고객센터: 쿠쿠 고객센터 1588-8899 (official CUCKOO CS number in spec table) | ~1290px of 2518 (lower-middle, spec table last row) | no
+full/ext/ND-A0610FG_img_aroma.jpg | A/S 1588-8899(AS) (spec table) | ~7460px of 7860 (bottom) | no
+full/ext/ND-A0610FG_img_aroma.jpg | tiny product-label text on aroma can: manufacturer address "경상남도 양산시 ..." + phone "055-380-0700" (partly legible) | ~3750px (can photo, lower-left of can) | no
+full/ext/CP-U011W_img.jpg | URL "http://www.cuckoo.co.kr/customer/center.aspx" (가까운 서비스 센터는 ...에서 찾아보세요!) | ~10370px of 12049 | no
+full/ext/CP-U011W_img.jpg | A/S 1588-8899(AS) (spec table) | ~11700px of 12049 (bottom) | no
+full/ext/CP-U011W_img.jpg | tiny printed text on filter cartridge labels "계약관련 문의 1577-xxxx" (barely legible, CUCKOO product labels) | ~2500px and ~4310px | no

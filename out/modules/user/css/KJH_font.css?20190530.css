@@ -1,0 +1,56 @@
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');*/
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('/modules/user/css/NotoSansKR-Regular.woff') format('woff'),
+		   url('/modules/user/css/NotoSansKR-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('/modules/user/css/NotoSansKR-Bold.woff') format('woff'),
+            url('/modules/user/css/NotoSansKR-Bold.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* 나눔스퀘어 웹폰트 =================================================================================================*/
+@font-face {
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 100;
+	src:url("/common/css/font/NanumSquareL.eot");
+	src:url("/common/css/font/NanumSquareL.eot?#iefix") format('embedded-opentype'),
+		url("/common/css/font/NanumSquareL.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 200;
+	src:url("/common/css/font/NanumSquareR.eot");
+	src:url("/common/css/font/NanumSquareR.eot?#iefix") format('embedded-opentype'),
+		url("/common/css/font/NanumSquareR.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 300;
+	src:url("/common/css/font/NanumSquareB.eot");
+	src:url("/common/css/font/NanumSquareB.eot?#iefix") format('embedded-opentype'),
+		url("/common/css/font/NanumSquareB.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 400;
+	src:url("/common/css/font/NanumSquareEB.eot");
+	src:url("/common/css/font/NanumSquareEB.eot?#iefix") format('embedded-opentype'),
+		url("/common/css/font/NanumSquareEB.woff") format('woff');
+}
+
+/* //나눔스퀘어 웹폰트 =================================================================================================*/

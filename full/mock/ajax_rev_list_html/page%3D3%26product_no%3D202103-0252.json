@@ -1,0 +1,60 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="3" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*봄</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">공기청정기는 다 거기서 거기겠지 했는데                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.02</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span>
+      </div>
+      <div >
+        <p class="dcText">앞뒤로만 공기청정하는것과 달리 360도로 슝 공기 청정 되는건 아예 차원이 다르네요! 청정 속도도 엄청 빠르고 더 쾌적한 느낌이 들어요 행복쓰<br/><br/><span onClick="f_rev_detail('20241113-111834')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*호</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">홀리                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.09.28</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span>
+      </div>
+      <div >
+        <p class="dcText">다른건 잘 모르겠는데 일단 요금 적게 나와서 좋고 사각 없이 제대로 공기청정해주는 점이 굿굿<br/><br/><span onClick="f_rev_detail('20241113-111817')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">&lt;</a><a href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">1</a><a href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">2</a><span class='dcSelectStep'>3</span><a id="pg_next"href="/user/product_detail/run/page/3"  onclick="f_rev_list(3);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/3"  onclick="f_rev_list(3);return false;">&raquo;</a></div>
+

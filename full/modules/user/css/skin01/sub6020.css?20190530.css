@@ -1,0 +1,670 @@
+@charset "utf-8";
+
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+:root{
+  /* Color - LG전자 로고 톤에 맞춘 레드 & 블랙 기반 */
+  --color-primary:#ce0041;
+  --color-primary-light:#bf023e;
+  --color-primary-dark:#6d0123;
+  --color-yellow:#f2be2a;
+  --color-yellow-dark:#ffb92e;
+  --color-navy:#141414;
+  --color-navy-solid:#1a1a1a;
+  --color-blue-light:#fdf9fa;
+  --color-gray-300:#e3e3ea;
+  --color-gray-500:#9a9aa6;
+  --color-gray-700:#57576a;
+  --color-text:#2a2a35;
+  --color-white:#fff;
+
+  /* Typography */
+  --font-base:'Pretendard','Noto Sans KR',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+  --fs-h1:clamp(38px,3.4vw,48px);
+
+  /* Layout */
+  --container-width:1360px;
+  --gutter:24px;
+  --radius-pill:999px;
+
+  /* Shadow & Motion */
+  --shadow-card:0 12px 30px rgba(28,42,74,.08);
+  --shadow-form:0 20px 60px rgba(28,42,74,.25);
+  --transition-base:.25s ease;
+}
+
+/* =========================================================
+   RESET & BASE
+========================================================= */
+body{font-family:var(--font-base);color:var(--color-text);background:var(--color-white);}
+button{font-family:var(--font-base);cursor:pointer;border:0;background:none;color:inherit;}
+input,select,textarea{font-family:var(--font-base);font-size:inherit;color:inherit;}
+ul,ol{list-style:none;}
+img{max-width:100%;height:auto;}
+h1,h2,h3,h4,h5,h6{font-weight:700;}
+section{position:relative;padding:100px 0;}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+}
+/* =========================================================
+   COMMON - 공통 타이포그래피 / 유틸리티
+========================================================= */
+.badge{display:inline-flex;align-items:center;margin-bottom:24px;padding:8px 20px;border-radius:var(--radius-pill);font-size:14px;font-weight:600;}
+h1{font-size:var(--fs-h1);line-height:1.2;letter-spacing:-.04em;margin:0 0 22px;}
+h2{font-size:40px;font-weight:900;line-height:1.25;}
+h3{font-size:28px;font-weight:800;line-height:1.3;margin-bottom:10px;}
+.desc{font-size:16px;line-height:1.5;margin-bottom:20px;}
+input{display:block;width:100%;height:50px;border-radius:10px;background:#fff;box-sizing:border-box;font-size:15px;padding:0 15px;}
+/* =========================================================
+   HEADER
+========================================================= */
+.header{position:absolute;top:0;left:0;width:100%;z-index:200;padding:28px 0;transition:background var(--transition-base),padding var(--transition-base),box-shadow var(--transition-base);}
+.header.is-scrolled{position:fixed;padding:14px 0;background:rgba(28,42,74,.94);backdrop-filter:blur(8px);box-shadow:0 6px 20px rgba(0,0,0,.15);}
+.header__inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:var(--container-width);min-height:40px;margin:0 auto;padding:0 24px;}
+/* 헤더 한줄 롤링 배너 */
+.header-notice{position:relative;overflow:hidden;width:100%;height:22px;}
+.header-notice__track{display:flex;flex-direction:column;}
+.header-notice__item{display:flex;align-items:center;height:22px;color:#fff;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* =========================================================
+   QUICK NAVIGATION
+========================================================= */
+.quicknav{position:fixed;top:50%;right:28px;z-index:150;display:flex;flex-direction:column;gap:18px;transform:translateY(-50%);text-align:right;}
+.quicknav__link{position:relative;padding-right:16px;color:var(--color-gray-700);font-size:12px;font-weight:600;opacity:.7;transition:opacity var(--transition-base),color var(--transition-base);}
+.quicknav__link::after{content:'';position:absolute;top:50%;right:0;width:6px;height:6px;border-radius:50%;background:var(--color-gray-500);transform:translateY(-50%);transition:background var(--transition-base),transform var(--transition-base);}
+.quicknav__link:hover{opacity:1;}
+.quicknav__link.is-active{color:var(--color-primary);font-weight:700;opacity:1;}
+.quicknav__link.is-active::after{background:var(--color-primary);transform:translateY(-50%) scale(1.4);}
+.quicknav--on-dark .quicknav__link{color:rgba(255,255,255,.75);}
+.quicknav--on-dark .quicknav__link::after{background:rgba(255,255,255,.6);}
+.quicknav--on-dark .quicknav__link.is-active{color:#fff;}
+.quicknav--on-dark .quicknav__link.is-active::after{background:#fff;}
+/* =========================================================
+   SECTION 1 - HERO
+========================================================= */
+.hero{position:relative;min-height:700px;padding:150px 0 30px;overflow:hidden;background:linear-gradient(135deg,var(--color-primary-light),var(--color-primary-dark));color:#fff;}
+.hero-decor{position:absolute;inset:0;width:100%;height:100%;opacity:.8;pointer-events:none;}
+.hero-decor circle{fill:none;stroke:rgba(255,255,255,.2);stroke-width:1;}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px) minmax(320px,380px);align-items:center;gap:20px;width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter) 90px;box-sizing:border-box;}
+.hero-content{align-self:start;padding-top:20px;}
+.hero .badge{background:var(--color-primary-dark);color:#fff;}
+.hero h1 strong{display:block;margin-top:4px;color:var(--color-yellow);font-size:1.05em;font-weight:800;}
+.hero .desc{color:rgba(255,255,255,.9);}
+.hero-stats{display:flex;gap:16px;margin-top:94px;}
+.hero-stat{display:flex;flex-direction:column;align-items:center;justify-content:center;width:124px;height:94px;padding:12px 10px;border-radius:18px;background:#fff;box-shadow:0 10px 25px rgba(26,26,26,.15);text-align:center;box-sizing:border-box;}
+.hero-stat strong{margin-bottom:7px;color:var(--color-primary);font-size:28px;font-weight:800;line-height:1;letter-spacing:-.03em;}
+.hero-stat span{color:#555;font-size:13px;font-weight:600;line-height:1.3;white-space:nowrap;}
+.hero .nmLiveDot{display:inline-block;width:7px;height:7px;margin-left:10px;border-radius:50%;background:var(--color-navy-solid);animation:nmDotPulse 1.4s infinite;}
+.hero-image{padding-top:30px;}
+.hero-form{width:100%;}
+.hero-form .consult{width:100%;box-sizing:border-box;}
+.hero .scroll-indicator{position:absolute;bottom:0;background:#fff;transform:none;left:calc(50% - 60px);}
+
+@keyframes nmDotPulse{
+  0%{box-shadow:0 0 0 0 rgba(26,26,26,.5);}
+  70%{box-shadow:0 0 0 6px rgba(26,26,26,0);}
+  100%{box-shadow:0 0 0 0 rgba(26,26,26,0);}
+}
+/* 상담 신청 폼 */
+.consult{padding:30px;border-radius:28px;background:#fff;color:var(--color-text);box-shadow:var(--shadow-form);}
+.consult h3{color:var(--color-navy);}
+.consult .desc{color:var(--color-gray-700);}
+.consult-field{margin-bottom:18px;}
+.consult-label{display:block;margin-bottom:8px;color:var(--color-gray-700);font-size:14px;font-weight:700;}
+.consult input{border:1px solid var(--color-gray-300);}
+.consult input:focus{outline:0;border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(206,0,65,.1);}
+.consult-error{display:none;margin:7px 0 0;color:#e5484d;font-size:12px;line-height:1.4;}
+.consult-field.has-error input{border-color:var(--color-primary);}
+.consult-field.has-error .consult-error{display:block;}
+.consult-submit{width:100%;height:56px;margin-top:4px;padding:0 20px;border-radius:12px;background:var(--color-navy-solid);color:#fff;font-size:16px;font-weight:700;transition:background var(--transition-base),transform var(--transition-base),box-shadow var(--transition-base);}
+.consult-submit:hover{background:var(--color-primary);transform:translateY(-2px);box-shadow:0 8px 20px rgba(206,0,65,.25);}
+.consult-submit:active{transform:translateY(0);}
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+.scroll-indicator{position:absolute;bottom:0;display:flex;flex-direction:column;align-items:center;gap:6px;width:120px;height:60px;border-radius:60px 60px 0 0;padding-top:14px;color:var(--color-gray-500);font-size:11px;font-weight:700;}
+.scroll-indicator i{font-style:normal;line-height:1;animation:bounce-down 1.6s infinite;}
+.scroll-indicator--dark{background:var(--color-yellow);color:rgba(255,255,255,.75);}
+.scroll-indicator--white{background:var(--color-white);}
+
+@keyframes bounce-down{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(5px);}
+}
+/* =========================================================
+   섹션2- 인증
+========================================================= */
+.cert{background:#fff;}
+.cert-inner{max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter) 0px;}
+.cert-head{text-align:center;}
+.cert-eyebrow{margin-bottom:10px;color:var(--color-gray-700);font-size:20px;font-weight:700;text-align:center;}
+.cert h2{margin-bottom:56px;color:var(--color-primary);}
+.cert-brand{margin-bottom:90px;text-align:center;}
+.cert-brand img{display:inline-block;max-width:100%;height:auto;border-radius:24px;}
+.cert .scroll-indicator{position:absolute;right:calc(50% - 600px);bottom:0;left:auto;transform:none;background:#f7f8fb;color:#ccc;}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+.cert-card{position:relative;display:flex;flex-direction:column;padding:25px;overflow:hidden;border-radius:24px;box-shadow:var(--shadow-card);transition:transform .3s ease,box-shadow .3s ease;}
+.cert-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:var(--card-color);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;}
+.cert-card::after{content:'';position:absolute;right:-45px;top:-45px;width:130px;height:130px;border-radius:50%;background:var(--card-decor);}
+.cert-card:hover{transform:translateY(-8px);box-shadow:0 20px 42px rgba(28,42,74,.15);}
+.cert-card:hover::before{transform:scaleX(1);}
+.cert-card:hover .cert-icon{border-color:var(--card-color);}
+.cert-card:hover .cert-no{opacity:1;}
+.cert-red{--card-color:#e94b63;--card-decor:rgba(233,75,99,.12);background:linear-gradient(145deg,#fff 0%,#fff0f3 100%);}
+.cert-orange{--card-color:#f28b38;--card-decor:rgba(242,139,56,.13);background:linear-gradient(145deg,#fff 0%,#fff4e8 100%);}
+.cert-yellow{--card-color:#e3b52d;--card-decor:rgba(227,181,45,.14);background:linear-gradient(145deg,#fff 0%,#fff9df 100%);}
+.cert-green{--card-color:#42aa72;--card-decor:rgba(66,170,114,.13);background:linear-gradient(145deg,#fff 0%,#eaf9f0 100%);}
+.cert-mint{--card-color:#36aaa1;--card-decor:rgba(54,170,161,.13);background:linear-gradient(145deg,#fff 0%,#e8f8f6 100%);}
+.cert-blue{--card-color:#478bd2;--card-decor:rgba(71,139,210,.13);background:linear-gradient(145deg,#fff 0%,#eaf3ff 100%);}
+.cert-purple{--card-color:#8274c7;--card-decor:rgba(130,116,199,.14);background:linear-gradient(145deg,#fff 0%,#f0edff 100%);}
+.cert-pink{--card-color:#d8669b;--card-decor:rgba(216,102,155,.13);background:linear-gradient(145deg,#fff 0%,#fff0f7 100%);}
+.cert-no{position:absolute;top:24px;right:24px;z-index:2;color:var(--card-color);font-size:20px;font-weight:900;letter-spacing:1px;opacity:.65;}
+.cert-icon{width:80px;height:auto;margin-bottom:20px;}
+.cert-icon img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:15px;}
+.cert-name{margin-bottom:5px;color:var(--color-text);font-size:17px;font-weight:800;}
+.cert-desc{color:var(--color-gray-700);font-size:13px;line-height:1.5;}
+/* =========================================================
+   섹션2-1 누적 계정 인증 STATS
+========================================================= */
+.stats{position:relative;padding:110px 0 0;background:#f7f8fb;overflow:hidden;}
+.stats::before{content:'';position:absolute;top:-180px;left:-180px;width:500px;height:500px;border-radius:50%;background:rgba(206,0,65,.05);pointer-events:none;}
+.stats::after{content:'';position:absolute;right:-200px;bottom:-250px;width:550px;height:550px;border-radius:50%;background:rgba(165,0,52,.05);pointer-events:none;}
+.stats-inner{position:relative;z-index:1;width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter) 130px;}
+.stats-head{text-align:center;}
+.stats-eyebrow{margin-bottom:9px;color:var(--color-primary);font-size:16px;font-weight:700;letter-spacing:-.02em;text-align:center;}
+.stats-title{margin-bottom:14px;color:var(--color-navy);font-size:40px;font-weight:900;line-height:1.25;letter-spacing:-.05em;}
+.stats .desc{text-align:center;}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:55px auto 0;}
+.stats-card{position:relative;min-height:310px;padding:38px 40px;overflow:hidden;border-radius:26px;background:#fff;box-shadow:0 15px 40px rgba(28,42,74,.08);transition:transform .3s ease,box-shadow .3s ease;}
+.stats-card:hover{transform:translateY(-7px);box-shadow:0 22px 50px rgba(28,42,74,.13);}
+.stats-card::after{content:'';position:absolute;right:-55px;bottom:-55px;width:180px;height:180px;border-radius:50%;background:var(--stats-bg);pointer-events:none;}
+.stats-account{--stats-color:#ce0041;--stats-bg:rgba(206,0,65,.07);}
+.stats-sales{--stats-color:#ff0c59;--stats-bg:rgba(255,12,89,.08);}
+.stats-label{position:relative;z-index:1;display:block;color:var(--stats-color);font-size:10px;font-weight:800;letter-spacing:1.8px;}
+.stats-icon{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:54px;height:54px;margin:25px 0 17px;border-radius:16px;background:var(--stats-bg);color:var(--stats-color);font-size:21px;}
+.stats-name{position:relative;z-index:1;margin-bottom:8px;color:var(--color-gray-700);font-size:15px;font-weight:700;}
+.stats-number{position:relative;z-index:1;display:flex;align-items:baseline;gap:4px;color:var(--color-navy);}
+.stats-number strong{font-size:54px;font-weight:900;line-height:1;letter-spacing:-.06em;}
+.stats-number em{color:var(--stats-color);font-size:22px;font-style:normal;font-weight:800;}
+.stats-note{position:relative;z-index:1;margin-top:22px;color:var(--color-gray-500);font-size:12px;line-height:1.6;}
+.stats-bottom{display:flex;align-items:center;justify-content:center;gap:9px;margin:48px auto 0;color:var(--color-gray-500);font-size:12px;text-align:center;}
+.stats-bottom i{color:var(--color-primary);font-size:14px;}
+.stats .scroll-indicator{left:calc(50% - 600px);right:auto;transform:none;}
+/* =========================================================
+   섹션3- 보상제도
+========================================================= */
+.yogo{background:linear-gradient(135deg,var(--color-yellow-dark) 0%,var(--color-yellow) 100%);color:var(--color-navy-solid);padding:130px 0;}
+.yogo-decor{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.yogo-inner{max-width:var(--container-width);margin:0 auto;display:grid;grid-template-columns:480px 1fr;gap:60px;}
+.yogo-box{position:relative;width:100%;max-width:380px;min-height:330px;display:flex;justify-content:center;}
+.yogo-card{width:300px;min-height:280px;padding:45px 25px 35px;background:#fff;border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 25px 50px rgba(0,0,0,.18);transform:rotate(-4deg);}
+.yogo-card i{width:100px;height:100px;margin-bottom:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--color-yellow);font-size:40px;}
+.yogo-card strong{font-size:30px;font-weight:900;margin-bottom:10px;}
+.yogo-card span{font-size:17px;line-height:1.5;font-weight:500;color:#555;}
+.yogo-badge{position:absolute;z-index:2;top:-20px;right:-10px;width:140px;height:140px;border-radius:50%;background:var(--color-navy-solid);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 15px 30px rgba(0,0,0,.25);transform:rotate(8deg);}
+.yogo-badge strong{font-size:35px;line-height:1;font-weight:900;color:var(--color-yellow);}
+.yogo-badge span{margin-top:6px;font-size:17px;font-weight:700;}
+.yogo .badge{background:var(--color-navy-solid);color:#fff;}
+.yogo h2{margin:0 0 22px;}
+.yogo .desc{font-size:20px;}
+.yogo .guarantee{display:inline-flex;flex-direction:column;gap:10px;padding:40px 50px;margin-top:20px;background:rgba(255,255,255,.72);border-radius:15px;}
+.yogo .guarantee span{font-size:18px;font-weight:600;}
+.yogo .guarantee strong{font-size:40px;font-weight:900;color:var(--color-navy-solid);}
+.yogo .note{margin:14px 0 0 20px;font-size:15px;color:rgba(0,0,0,.75);}
+.yogo .bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:30px;padding-top:20px;border-top:1px solid rgba(0,0,0,.15);}
+.yogo .bottom p{margin:0;font-size:20px;font-weight:700;}
+.yogo .bottom p i{font-size:16px;color:var(--color-navy-solid);margin-right:5px;}
+.yogo .scroll-indicator{position:absolute;bottom:0;background:#fff;transform:none;left:calc(50% - 60px);}
+/* =========================================================
+   섹션4- 인기제품
+========================================================= */
+.prod{background:linear-gradient(135deg,#fff 0%,var(--color-blue-light) 60%,#f0d1db 100%);}
+.prod-inner{position:relative;z-index:2;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter) 120px;}
+.prod-head{text-align:center;margin-bottom:55px;}
+.prod .badge{background:var(--color-blue-light);border:1px solid #f2d9e1;color:var(--color-navy-solid);}
+.prod .badge em{margin-left:5px;color:var(--color-primary);font-style:normal;}
+.prod h2{margin:20px 0;color:var(--color-navy-solid);}
+.prod-head>.desc{color:var(--color-gray-700);text-align:center;}
+.prod-list{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;}
+.prod-card{position:relative;overflow:hidden;background:#fff;border:1px solid rgba(28,42,74,.08);border-radius:24px;box-shadow:0 10px 28px rgba(28,42,74,.08);transition:transform .3s ease,box-shadow .3s ease;}
+.prod-card:hover{transform:translateY(-8px);box-shadow:0 20px 42px rgba(28,42,74,.15);}
+.prod-tag{position:absolute;z-index:2;top:16px;left:16px;padding:6px 11px;border-radius:20px;background:var(--color-primary);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;}
+.prod-img{background:#f7faff;}
+.prod-img img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s ease;}
+.prod-card:hover .prod-img img{transform:scale(1.06);}
+.prod-info{padding:22px 22px 24px;}
+.prod-brand{display:block;margin-bottom:6px;color:var(--color-primary);font-size:12px;font-weight:800;}
+.prod-name{color:var(--color-navy-solid);font-size:17px;font-weight:900;line-height:1.4;letter-spacing:-.5px;}
+.prod-info>.prod-desc{overflow:hidden;margin-bottom:10px;color:var(--color-gray-700);font-size:15px;line-height:1.5;text-overflow:ellipsis;white-space:nowrap;}
+.prod-price{padding:20px 0;border-top:1px solid #edf0f4;}
+.price-main{display:flex;align-items:baseline;justify-content:flex-end;gap:8px;color:var(--color-navy-solid);white-space:nowrap;}
+.price-main span{font-size:22px;font-weight:700;}
+.price-main small{color:#777;font-size:13px;font-weight:500;}
+.price-main small strong{margin-left:2px;color:var(--color-navy-solid);font-size:13px;font-weight:900;}
+.guest_amt{text-decoration:line-through;}
+.price-card{color:#e53935;font-size:22px;font-weight:800;text-align:right;}
+.price-card span{margin-right:5px;color:#888;font-size:13px;font-weight:500;}
+.price-empty{height:20px;}
+.price-once{padding:7px 10px;border-radius:8px;background:#fff2f2;color:#e53935;font-size:12px;font-weight:800;}
+.prod-btn{display:flex;align-items:center;justify-content:space-between;width:100%;box-sizing:border-box;margin-top:5px;padding:12px 15px;border-radius:12px;background:var(--color-navy-solid);color:#fff;font-size:12px;font-weight:700;text-decoration:none;transition:.25s;}
+.prod-btn:hover{background:var(--color-primary);}
+.prod-btn i{font-size:10px;}
+
+.prod .scroll-indicator{position:absolute;right:calc(50% - 600px);bottom:0;left:auto;transform:none;background:#f7f8fb;color:#ccc;}
+/* =========================================================
+   섹션5 - 실시간 상담현황
+========================================================= */
+.live{position:relative;overflow:hidden;padding:110px 0 120px;background:linear-gradient(135deg,#fff 0%,var(--color-blue-light) 60%,#f0d1db 100%);}
+.live-decor{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.live-inner{position:relative;z-index:2;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter);}
+/* 섹션 타이틀 */
+.live-head{margin-bottom:55px;text-align:center;}
+.live-badge{display:inline-flex;align-items:center;padding:7px 15px;border:1px solid #f2d9e1;border-radius:var(--radius-pill);background:var(--color-blue-light);color:var(--color-navy-solid);font-size:13px;font-weight:800;letter-spacing:.5px;}
+.live-badge em{margin-left:5px;color:#ef4444;font-style:normal;}
+.live h2{margin:20px;}
+.live .desc{text-align:center;}
+/* 전체 2단 */
+.live-body{display:grid;grid-template-columns:60% 1fr;gap:30px;align-items:start;}
+/* 왼쪽 - 상담 안내 */
+.live-info{min-width:0;padding:34px 36px;background:#fff;border:1px solid rgba(28,42,74,.08);border-radius:24px;box-shadow:0 10px 30px rgba(28,42,74,.07);}
+.live-label{display:inline-block;margin-bottom:16px;color:var(--color-primary);font-size:13px;font-weight:800;letter-spacing:.3px;}
+.live-info h3{margin:0 0 16px;color:var(--color-navy-solid);font-size:30px;font-weight:700;line-height:1.4;letter-spacing:-1px;}
+.live-info h3 strong{font-weight:900;}
+.live-info .live-desc{margin:0 0 28px;color:var(--color-gray-700);}
+/* 상담 혜택 + 운영시간 */
+.live-guide{display:grid;grid-template-columns:34% 1fr;gap:15px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid #edf0f4;}
+/* 상담 혜택 */
+.live-benefit{display:flex;flex-direction:column;gap:11px;}
+.live-benefit>strong{margin-top:15px;color:var(--color-navy-solid);font-size:18px;font-weight:900;}
+.live-benefit div{display:flex;align-items:center;gap:8px;color:var(--color-navy-solid);font-size:15px;}
+.live-benefit i{display:flex;align-items:center;justify-content:center;width:18px;height:18px;flex:0 0 18px;border-radius:50%;background:#1a1a1a;color:#fff;font-size:9px;}
+/* 상담 운영시간 */
+.live-time{margin:0;padding:20px;border-radius:12px;background:#f5f7fb;}
+.live-time-title{display:flex;align-items:center;gap:7px;margin-bottom:14px;color:var(--color-navy-solid);}
+.live-time-title i{color:#1a1a1a;font-size:15px;}
+.live-time-title strong{font-size:17px;font-weight:900;}
+.live-time-info{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 20px;}
+.live-time-info div{display:flex;align-items:center;justify-content:flex-start;gap:10px;line-height:1.4;}
+.live-time-info span{color:#999;}
+.live-time-info strong{color:#444;font-weight:700;text-align:left;white-space:nowrap;}
+.live-time-info em{margin-left:3px;color:#1a1a1a;font-size:13px;}
+.live-time-note{display:flex;align-items:flex-start;gap:6px;margin:14px 0 0;padding:10px 12px;border-radius:8px;background:#fff;color:#888;font-size:13px;line-height:1.4;}
+.live-time-note i{color:#1a1a1a;font-size:15px;}
+/* 대표 상담번호 */
+.live-contact{padding:15px 18px;border-radius:13px;background:#f5f7fb;text-align:right;}
+.live-contact span{color:#777;font-size:15px;font-weight:700;margin-right:10px;}
+.live-contact a{color:#1a1a1a;font-size:34px;font-weight:900;line-height:1;text-decoration:none;letter-spacing:-.5px;}
+/* 오른쪽 - 실시간 접수현황 */
+.live-list{min-width:0;padding:30px;background:rgba(255,255,255,.72);border:1px solid rgba(28,42,74,.08);border-radius:28px;box-shadow:0 12px 35px rgba(28,42,74,.08);}
+.live-list-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.live-list-head>div{display:flex;align-items:center;gap:9px;}
+.live-list-head strong{color:var(--color-navy-solid);font-size:17px;font-weight:900;}
+.live-list-head>span{padding:5px 9px;border-radius:20px;background:#fff0f0;color:#ef4444;font-size:9px;font-weight:900;letter-spacing:1px;}
+.live-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 5px rgba(239,68,68,.1);animation:livePulse 1.5s infinite;}
+/* 접수 리스트 */
+.live-window{position:relative;height:410px;overflow:hidden;}
+.live-window::before{content:'';position:absolute;z-index:2;top:0;right:0;left:0;height:35px;background:linear-gradient(#f9fcff,transparent);pointer-events:none;}
+.live-window::after{content:'';position:absolute;z-index:2;right:0;bottom:0;left:0;height:35px;background:linear-gradient(transparent,#f9fcff);pointer-events:none;}
+.live-track{display:flex;flex-direction:column;gap:10px;}
+.live-item{display:grid;grid-template-columns:65px minmax(0,1fr) auto auto;align-items:center;gap:15px;min-height:65px;padding:10px 15px;box-sizing:border-box;border:1px solid #edf1f6;border-radius:14px;background:#fff;}
+.live-status{display:inline-flex;align-items:center;justify-content:center;padding:5px 7px;border-radius:6px;background:#edf8f1;color:#28a05a;font-size:13px;font-weight:800;white-space:nowrap;}
+.live-product{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.live-product strong{overflow:hidden;color:var(--color-navy-solid);font-size:14px;font-weight:900;text-overflow:ellipsis;white-space:nowrap;}
+.live-product span{overflow:hidden;color:#777;font-size:14px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap;}
+.live-place{color:#777;font-size:14px;white-space:nowrap;}
+.live-item time{color:#aaa;font-size:14px;white-space:nowrap;}
+.live-notice{margin:20px 0 0;color:#999;font-size:14px;text-align:right;}
+.live-notice i{margin-right:3px;}
+.live .scroll-indicator{left:calc(50% - 600px);right:auto;transform:none;background:#1e2739;}
+
+/* 실시간 표시 */
+@keyframes livePulse{
+  0%,100%{box-shadow:0 0 0 4px rgba(239,68,68,.1);}
+  50%{box-shadow:0 0 0 8px rgba(239,68,68,.03);}
+}
+/* =========================================================
+   섹션6 - 리뷰
+========================================================= */
+.review{position:relative;overflow:hidden;padding:120px 0;background:linear-gradient(135deg,#0f172a,#1e2739);}
+.review .review-inner{max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter);}
+.review .badge{border:1px solid #f2d9e1;border-radius:var(--radius-pill);background:var(--color-blue-light);color:var(--color-navy-solid);}
+.review .badge em{margin-left:5px;color:var(--color-primary);font-style:normal;}
+.review-head{text-align:center;color:#fff;}
+.review-head>.desc{color:#eee;text-align:center;}
+.reviewSwiper{margin-top:80px;--swiper-theme-color:#ce0041;--swiper-pagination-bottom:0px;--swiper-pagination-bullet-height:5px;--swiper-pagination-bullet-width:30px;--swiper-pagination-bullet-border-radius:0px;--swiper-pagination-bullet-inactive-color:#eee;}
+.reviewSwiper swiper-slide{background:#fff;border-radius:24px;margin-bottom:40px;}
+.review .scroll-indicator{left:calc(50% - 600px);right:auto;bottom:0;transform:none;background:#fdf9fa;}
+.review_card{border-radius:15px;overflow:hidden;transition:.3s;}
+.review_img{aspect-ratio:1/1;overflow:hidden;}
+.review_img img{width:100%;height:100%;object-fit:cover;transition:.3s;}
+.review_card:hover img{transform:scale(1.05);}
+.review_body{padding:15px;}
+.rating{color:#ffb400;font-size:15px;margin-bottom:5px;}
+.model{color:#888;font-size:13px;margin-bottom:5px;}
+.review_body h3{display:block;overflow:hidden;margin-bottom:5px;font-size:18px;white-space:nowrap;text-overflow:ellipsis;}
+.review_body p{overflow:hidden;height:88px;color:#666;font-size:0.84em;line-height:1.3;}
+.review_bottom{display:flex;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid #eee;font-size:14px;font-weight:600;}
+.review .scroll-indicator{position:absolute;bottom:0;background:#f7f8fb;transform:none;left:calc(50% - 60px);}
+/* =========================================================
+   섹션7- 이벤트 배너
+========================================================= */
+.event-wrap{position:relative;overflow:hidden;padding:120px 0;background:linear-gradient(135deg,#ffffff 0%,var(--color-blue-light) 60%,#f0d1db 100%);}
+.event-wrap .decor{position:absolute;inset:0;pointer-events:none;}
+.event-wrap .inner{position:relative;z-index:2;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1fr 800px;gap:50px;align-items:center;}
+.event-wrap .badge{display:inline-flex;align-items:center;margin-bottom:22px;padding:8px 20px;border:1px solid #f2d9e1;border-radius:var(--radius-pill);background:var(--color-blue-light);color:var(--color-navy-solid);font-size:14px;font-weight:700;}
+.event-wrap .badge em{margin-left:4px;color:var(--color-primary);font-style:italic;}
+.event-wrap .title{margin-bottom:20px;color:var(--color-navy-solid);font-size:34px;font-weight:600;line-height:1.4;}
+.event-wrap .title strong{display:block;margin-top:6px;font-size:1.4em;font-weight:900;}
+.event-wrap .desc{margin-bottom:30px;color:var(--color-gray-700);font-size:15px;line-height:1.8;}
+.event-wrap .mockup{position:relative;width:100%;}
+.event-wrap .event-Swiper swiper-slide{background:#4c4c4c;border-radius:24px;overflow:hidden}
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer{position:relative;padding:45px 0 100px;background:#0d1117;color:#fff;overflow:hidden;}
+.footer::before{content:'CUCKOO';position:absolute;right:80px;bottom:40px;color:rgba(255,255,255,.045);font-size:250px;font-weight:900;line-height:1;letter-spacing:-.02em;pointer-events:none;}
+.footer-inner{position:relative;z-index:1;width:100%;max-width:var(--container-width);margin:0 auto;padding:0 var(--gutter);}
+.footer-hero{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:20px;}
+.footer-logo{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:23px;font-weight:800;letter-spacing:-.04em;}
+.footer-brand p{margin-top:20px;padding-left:20px;color:rgba(255,255,255,.4);font-size:23px;font-weight:300;line-height:1.4;letter-spacing:-.01em;}
+.footer-brand p strong{color:#fff;}
+.footer-top{display:flex;align-items:center;gap:13px;color:rgba(255,255,255,.45);font-size:12px;font-weight:700;letter-spacing:1.5px;transition:color .25s ease;}
+.footer-top i{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.15);border-radius:50%;font-style:normal;font-size:16px;transition:background .25s ease,border-color .25s ease,color .25s ease;}
+.footer-top:hover{color:#fff;}
+.footer-top:hover i{border-color:var(--color-primary);background:var(--color-primary);color:#fff;}
+.footer-line{width:100%;height:1px;background:rgba(255,255,255,.1);}
+/* 회사정보 */
+.footer-info{display:grid;grid-template-columns:1fr 320px;gap:60px;padding:32px 0 30px;}
+.footer-company-head{display:flex;align-items:center;gap:18px;margin-bottom:9px;}
+.footer-company-head strong{color:rgba(255,255,255,.85);font-size:14px;font-weight:700;}
+.footer-company-head span{color:rgba(255,255,255,.38);font-size:13px;}
+.footer-detail{display:flex;flex-wrap:wrap;gap:4px 20px;color:rgba(255,255,255,.34);font-size:13px;line-height:1.8;}
+.footer-customer{padding-left:30px;border-left:1px solid rgba(255,255,255,.1);}
+.customer-title{display:flex;align-items:center;gap:10px;margin-bottom:5px;}
+.customer-title span{color:rgba(255,255,255,.65);font-size:13px;font-weight:700;letter-spacing:.5px;}
+.customer-title small{color:rgba(255,255,255,.3);font-size:12px;}
+.customer-tel{display:block;color:#fff;font-size:30px;font-weight:700;line-height:1.3;letter-spacing:-.03em;transition:color .25s ease;}
+.customer-tel:hover{color:var(--color-primary);}
+.footer-customer p{margin-top:3px;color:rgba(255,255,255,.3);font-size:14px;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.24);font-size:10px;}
+.footer-bottom p{margin:0;}
+.footer-bottom strong{color:rgba(255,255,255,.4);font-weight:700;}
+/* =========================================================
+   UI - 맨 위로 버튼 (Scroll-to-top)
+========================================================= */
+.scroll-top{position:fixed;right:28px;bottom:177px;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#ff8a5c,#ff6b45);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;font-weight:800;box-shadow:0 12px 24px rgba(255,107,69,.4);opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity var(--transition-base),transform var(--transition-base),visibility var(--transition-base);z-index:180;}
+.scroll-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.scroll-top i{font-size:16px;}
+.scroll-top:hover{filter:brightness(1.06);}
+/* =========================================================
+   UI - 토스트 메시지 (Toast)
+========================================================= */
+.toast{position:fixed;left:50%;bottom:40px;padding:14px 26px;background:var(--color-navy-solid);color:#fff;font-size:14px;font-weight:600;border-radius:var(--radius-pill);box-shadow:0 14px 30px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translate(-50%,20px);transition:opacity var(--transition-base),transform var(--transition-base),visibility var(--transition-base);z-index:10000;text-align:center;max-width:92vw;}
+.toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0);}
+/* =========================================================
+   UI - 스크롤 등장 애니메이션 (Reveal)
+========================================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal-group .reveal:nth-child(1){transition-delay:.05s;}
+.reveal-group .reveal:nth-child(2){transition-delay:.12s;}
+.reveal-group .reveal:nth-child(3){transition-delay:.19s;}
+.reveal-group .reveal:nth-child(4){transition-delay:.26s;}
+.reveal-group .reveal:nth-child(5){transition-delay:.33s;}
+.reveal-group .reveal:nth-child(6){transition-delay:.4s;}
+.reveal-group .reveal:nth-child(7){transition-delay:.47s;}
+.reveal-group .reveal:nth-child(8){transition-delay:.54s;}
+/* =========================================================
+   상담 신청바
+========================================================= */
+.consult-bar{position:fixed;left:0;bottom:0;width:100%;padding:14px 0;background:rgba(255,255,255,.75);box-shadow:0 -6px 24px rgba(0,0,0,.10);z-index:9999;backdrop-filter:blur(10px);box-sizing:border-box;transform:translateY(110%);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease;}
+.consult-bar.is-visible{transform:translateY(0);opacity:1;pointer-events:auto;}
+.consult-bar .inner{max-width:1360px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px 45px;box-sizing:border-box;}
+.consult-bar .info{flex:0 1 auto;}
+.consult-bar .info p{margin:4px 0 0;color:#777;font-size:12px;letter-spacing:-.3px;}
+.consult-bar .title{display:flex;align-items:center;gap:12px;color:#111;font-size:18px;font-weight:700;}
+.consult-bar .title strong{font-size:28px;letter-spacing:-1px;}
+.consult-bar .consultBar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:10px 16px;}
+.consult-bar .field{display:flex;align-items:center;gap:10px;}
+.consult-bar .field label{color:#222;font-size:15px;font-weight:700;white-space:nowrap;}
+.consult-bar .field input{width:150px;height:40px;padding:0 13px;border:1px solid #d7dbe0;border-radius:6px;background:#fff;color:#222;font-size:14px;outline:none;box-sizing:border-box;transition:.2s;}
+.consult-bar .field input:focus{border-color:#ce0041;box-shadow:0 0 0 3px rgba(206,0,65,.08);}
+.consult-bar .field input::placeholder{color:#c3c6ca;}
+.consult-bar .consult-submit{order:2;width:auto;height:40px;margin-top:0;padding:0 26px;font-size:14px;}
+.phone-field input{width:180px;}
+.consult-bar-cta{display:none;}
+/* 개인정보 수집·이용 동의 체크박스 (히어로 폼 · 하단 상담바 공용) */
+.privacy-check{display:flex;align-items:center;gap:5px;color:#555;font-size:13px;white-space:nowrap;}
+.privacy-check input{width:14px;height:14px;margin:0;accent-color:#ce0041;}
+.privacy-detail{padding:0;border:0;background:none;color:#888;font-size:13px;cursor:pointer;padding-right:120px;}
+.consult .privacy-check{margin:2px 0 16px;}
+.consult-bar .privacy-check{order:3;flex:0 0 100%;justify-content:flex-end;}
+/* =========================================================
+   개인정보 팝업
+========================================================= */
+.privacy-modal{display:none;position:fixed;inset:0;z-index:10000;}
+.privacy-modal.active{display:block;}
+.privacy-dim{position:absolute;inset:0;background:rgba(0,0,0,.55);}
+.privacy-box{position:absolute;left:50%;top:50%;width:420px;max-width:calc(100% - 40px);padding:30px;transform:translate(-50%,-50%);border-radius:12px;background:#fff;box-sizing:border-box;box-shadow:0 20px 50px rgba(0,0,0,.2);}
+.privacy-box h3{margin:0 0 20px;color:#111;font-size:19px;}
+.privacy-content{padding:18px;border-radius:8px;background:#f7f8fa;color:#555;font-size:13px;line-height:1.7;}
+.privacy-close{position:absolute;right:15px;top:12px;border:0;background:none;color:#888;font-size:28px;cursor:pointer;}
+
+
+/* =========================================================================
+   반응형 (RESPONSIVE) - 아래로 태블릿 → 모바일 순으로 정리
+   PC 섹션과 동일한 주석명으로 매칭해두었습니다.
+========================================================================= */
+
+/* =========================================================
+   MOBILE (max-width:767px)
+========================================================= */
+@media(max-width:767px){
+
+  /* ---------- BASE ---------- */
+  body{width:100%;min-width:0!important;overflow-x:hidden;}
+  :root{--gutter:13px;--fs-h1:clamp(30px,8vw,38px);}
+  section{overflow:hidden;padding:80px 0;}
+  .scroll-indicator{display:none;}
+  div, span, p{letter-spacing:-0.5px }
+
+  .toast{width:63%}
+
+  /* ---------- HEADER ---------- */
+  .header{padding:18px 0;}
+  .header.is-scrolled{padding:10px 0;}
+  .header__inner{min-height:36px;padding:0 var(--gutter);font-size:13px;}
+  .header-notice{height:18px;}
+  .header-notice__item{height:18px;font-size:12px;}
+  .quicknav{display:none;}
+
+  /* ---------- SECTION 1 - HERO ---------- */
+  .hero{width:100%;min-width:0;min-height:auto;padding:100px 0 0;overflow:hidden;box-sizing:border-box;}
+  .hero-inner{display:flex;flex-direction:column;width:100%;max-width:none;min-width:0;gap:30px;margin:0;padding:0 16px 60px;box-sizing:border-box;}
+
+  .hero .desc{text-align:center;font-size:15px;}
+  .hero-content{width:100%;max-width:none;min-width:0;padding:10px 0 0;text-align:center;box-sizing:border-box;}
+  .hero-stats{width:100%;max-width:none;min-width:0;display:flex;gap:8px;margin-top:30px;box-sizing:border-box;}
+  .hero-stat{flex:1;width:auto;min-width:0;height:78px;border-radius:15px;box-sizing:border-box;}
+  .hero-stat strong{margin-bottom:5px;font-size:23px;}
+  .hero-stat span{font-size:12px;white-space:nowrap;}
+  .hero-image{order:2;display:flex;width:100%;max-width:none;min-width:0;margin:0;justify-content:center;box-sizing:border-box;}
+  .hero-image img{display:block;width:80%;max-width:320px;height:auto;margin:0 auto;}
+  .hero-form{order:3;width:100%;max-width:none;min-width:0;margin:0;box-sizing:border-box;}
+
+  /* 상담 신청 폼 */
+  .consult{padding:26px 20px 22px;border-radius:20px;}
+  .consult h3{text-align:center;}
+  .consult-field{margin-bottom:15px;}
+  .consult-label{margin-bottom:7px;font-size:13px;}
+  .consult-phone{gap:6px;}
+  .consult-submit{height:52px;margin-top:2px;font-size:15px;border-radius:12px;}
+
+  /* ---------- 섹션2- 인증 ---------- */
+  .cert-grid{grid-template-columns:repeat(2, 1fr);gap:14px;}
+  .cert .cert-eyebrow{font-size:4.2vw}
+  .cert h2{font-size:5.8vw}
+  .cert-card{min-height:190px;padding:24px 20px 22px;border-radius:18px;}
+  .cert-icon{width:64px;height:64px;margin-bottom:16px;border-radius:15px;}
+  .cert-icon img{padding:8px;}
+  .cert-name{min-height:auto;margin-bottom:7px;font-size:16px;}
+  .cert-desc{font-size:12.5px;}
+  .cert-no{top:20px;right:20px;}
+
+  /* ---------- 섹션2-1 누적 계정 인증 STATS ---------- */
+  .stats{padding-top:70px;}
+  .stats-inner{padding-bottom:100px;}
+  .stats-eyebrow{font-size:4.2vw;}
+  .stats-title{font-size:5.8vw;}
+  .stats .desc{font-size:3.2vw;}
+  .stats-grid{grid-template-columns:repeat(2, 1fr);gap:14px;margin-top:35px;}
+  .stats-card{min-height:240px;padding:20px 20px;border-radius:20px;}
+  .stats-icon{width:48px;height:48px;margin:20px 0 14px;border-radius:14px;font-size:19px;}
+  .stats-name{font-size:14px;}
+  .stats-number strong{font-size:7vw;}
+  .stats-number em{font-size:18px;}
+  .stats-note{margin-top:17px;font-size:13px;}
+  .stats-bottom{align-items:flex-start;margin-top:35px;font-size:12px;line-height:1.6;}
+
+  /* ---------- 섹션3- 보상제도 ---------- */
+  .yogo{padding:80px 0 0;}
+  .yogo-decor{opacity:.45;}
+  .yogo-inner{display:flex;flex-direction:column;width:100%;max-width:none;gap:45px;margin:0;padding:0 var(--gutter) 60px;box-sizing:border-box;}
+  .yogo-box{width:100%;max-width:340px;min-height:280px;margin:0 auto;}
+  .yogo-card{width:260px;min-height:340px;padding:35px 20px 30px;border-radius:27px;}
+  .yogo-card i{width:65px;height:65px;margin-bottom:18px;font-size:25px;}
+  .yogo-card strong{margin-bottom:8px;font-size:24px;}
+  .yogo-card span{font-size:14px;line-height:1.5;}
+  .yogo h2{font-size:6vw}
+  .yogo .desc{font-size:14px;text-align:center}
+  .yogo .note{font-size:14px;text-align:center;margin:10px 0;}
+  .yogo .bottom p{font-size:14px;margin-left:30px;}
+  .yogo .guarantee strong {font-size: 8vw;}
+  .yogo .guarantee{padding:30px;}
+  .yogo-badge{top:-12px;right:0;width:120px;height:120px;}
+  .yogo-badge strong{font-size:28px;}
+  .yogo-badge span{margin-top:5px;font-size:14px;}
+  .yogo .scroll-indicator{display:none;}
+  .yogo-text{width:100%;max-width:none;text-align:center;}
+
+  /* ---------- 섹션4- 인기제품 ---------- */
+  .prod-inner{padding-bottom:40px;}
+  .prod-inner h2{font-size: 7.5vw;}
+  .prod-head{margin-bottom:30px;}
+  .prod-head .desc{font-size:13px;}
+  .prod-list{grid-template-columns:repeat(2,1fr);gap:10px;}
+  .prod-card{border-radius:16px;}
+  .prod-info{padding:14px 14px 16px;}
+  .prod-brand{margin-bottom:4px;font-size:11px;}
+  .prod-name{font-size:14px;line-height:1.35;letter-spacing:-.3px;}
+  .prod-info>.prod-desc{margin-bottom:6px;font-size:12px;}
+  .prod-price{padding:12px 0;}
+  .price-main{flex-wrap:wrap;justify-content:flex-start;gap:2px 6px;}
+  .price-main span{font-size:15px;}
+  .price-main small{font-size:10px;}
+  .price-main small strong{font-size:10px;}
+  .price-card{font-size:14px;text-align:left;}
+  .price-card span{font-size:10px;}
+  .price-once{padding:5px 8px;font-size:10px;}
+  .prod-btn{margin-top:2px;padding:9px 10px;font-size:11px;}
+  .prod-btn i{font-size:9px;}
+
+  /* ---------- 섹션5 - 실시간 상담현황 ---------- */
+  .live{padding:75px 0 90px;}
+  .live h2{font-size: 8vw;}
+  .live-inner{padding:0 var(--gutter);}
+  .live-head{margin-bottom:35px;}
+  .live-badge{padding:6px 12px;font-size:11px;}
+  .live-body{grid-template-columns:1fr;gap:18px;}
+  .live-info{padding:26px 20px;border-radius:20px;}
+  .live-label{margin-bottom:13px;font-size:12px;}
+  .live-info h3{font-size:5vw;line-height:1.4;}
+  .live-info .live-desc{margin-bottom:23px;font-size:13px;}
+  .live-guide{grid-template-columns:1fr;gap:20px;margin-bottom:20px;padding-bottom:20px;}
+  .live-benefit{gap:9px;}
+  .live-benefit div{font-size:12px;}
+  .live-time{padding:18px 16px;border-radius:12px;}
+  .live-time-info{gap:7px 12px;}
+  .live-time-info div{font-size:10px;}
+  .live-time-info strong{font-size:10px;}
+  .live-time-note{font-size:9px;}
+  .live-contact{padding:15px;}
+  .live-contact a{font-size:23px;}
+  .live-list{padding:20px 14px;border-radius:20px;}
+  .live-list-head{margin-bottom:15px;}
+  .live-list-head strong{font-size:15px;}
+  .live-window{height:300px;}
+  .live-item{grid-template-columns:58px minmax(0,1fr) auto;gap:8px;min-height:62px;padding:10px;}
+  .live-status{padding:4px 6px;font-size:9px;}
+  .live-product strong{font-size:12px;}
+  .live-product span{font-size:10px;}
+  .live-place{font-size:10px;}
+  .live-item time{display:none;}
+  .live-notice{font-size:9px;}
+  .live .desc{font-size:3vw}
+
+  /* ---------- 섹션6 - 리뷰 ---------- */
+  .review{padding:70px 0;}
+  .review-head h2{font-size:6.2vw;margin-bottom:10px;}
+  .review-head .desc{font-size:13px;}
+  .reviewSwiper{margin-top:40px;--swiper-pagination-bullet-width:20px;}
+  .reviewSwiper swiper-slide{margin-bottom:30px;}
+  .review_body{padding:14px;}
+  .rating{font-size:13px;}
+  .model{font-size:12px;}
+  .review_body h3{font-size:16px;}
+  .review_body p{height:110px;font-size:12.5px;line-height:1.4;}
+  .review_bottom{margin-top:8px;padding-top:8px;font-size:12px;}
+
+  /* ---------- 섹션7- 이벤트 배너 ---------- */
+  .event-wrap{padding:70px 0;overflow-x:hidden;}
+  .event-wrap .inner{grid-template-columns:1fr;gap:30px;text-align:center;}
+  .event-wrap .download__content{min-width:0;}
+  .event-wrap .badge{margin-bottom:16px;font-size:13px;}
+  .event-wrap .title{font-size:5.3vw;margin-bottom:14px;}
+  .event-wrap .desc{margin-bottom:0;font-size:13px;line-height:1.6;text-align:center;}
+  .event-wrap .mockup{width:100%;min-width:0;}
+  .event-wrap .event-Swiper swiper-slide{border-radius:16px;}
+
+
+  /* ---------- FOOTER ---------- */
+  .footer{padding:55px 0 250px;}
+  .footer::before{right:-20px;bottom:-35px;font-size:180px;}
+  .footer-hero{align-items:flex-start;padding-bottom:34px;}
+  .footer-logo{font-size:20px;gap: 10px;}
+  .footer-logo img{width:90px}
+  .footer-brand p{margin-top:15px;font-size:3.8vw;padding-left: 10px;}
+  .footer-top{margin-top:2px;}
+  .footer-top span{display:none;}
+  .footer-top i{width:34px;height:34px;font-size:14px;}
+  .footer-info{display:flex;flex-direction:column;gap:28px;padding:28px 0 26px;}
+  .footer-company-head{display:block;margin-bottom:9px;}
+  .footer-company-head strong{display:block;font-size:14px;}
+  .footer-company-head span{display:block;margin-top:4px;font-size:12px;}
+  .footer-detail{display:flex;flex-direction:column;gap:2px;font-size:12px;}
+  .footer-customer{padding:0;border-left:0;}
+  .customer-title{margin-bottom:4px;}
+  .customer-tel{font-size:23px;}
+  .footer-customer p{font-size:12px;}
+  .footer-bottom{display:block;padding-top:18px;font-size:11px;line-height:1.8;}
+  .footer-bottom p:last-child{margin-top:3px;}
+
+  .scroll-top{display:none}
+
+  /* ---------- 상담 신청바 ---------- */
+  .consult-bar{padding:16px 0;box-shadow:0 -4px 16px rgba(0,0,0,.08);}
+  .consult-bar .inner{flex-direction:column;align-items:stretch;gap:12px;padding:0 var(--gutter);}
+  .consult-bar .info{width:100%;text-align:center;}
+  .consult-bar .info p{display:none;} /* 모바일에선 안내 문구 대신 전화번호만 노출 */
+  .consult-bar .title{justify-content:center;gap:8px;font-size:14px;}
+  .consult-bar .title strong{font-size:20px;}
+  .consult-bar .consultBar{display:none;} /* 모바일에서는 입력 폼 대신 버튼만 노출 */
+  .consult-bar-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:50px;border-radius:12px;background:var(--color-navy-solid);color:#fff;font-size:15px;font-weight:700;}
+
+  /* ---------- 개인정보 팝업 ---------- */
+  .privacy-box{width:calc(100% - 32px);padding:24px 20px;}
+  .privacy-box h3{margin-bottom:16px;font-size:17px;}
+  .privacy-content{padding:14px;font-size:12.5px;line-height:1.6;}
+  .privacy-close{right:12px;top:10px;font-size:24px;}
+}

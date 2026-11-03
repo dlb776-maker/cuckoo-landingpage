@@ -1,0 +1,252 @@
+OK||
+
+<ul class="dcReviewList">
+  <input type="hidden" name="page" id="page" value="3" />
+
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">주*민</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">잘도착했어요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.30</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">설치하자마자 바로 그날부터 쭉 켜고살고있어요조용하고 청정도 잘되고있어요좋아요<br/><br/><span onClick="f_rev_detail('20241113-112451')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*희</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">잘선택했어요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.30</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">지인소개</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">지인소개로 구매했구요 상담받아서 큰평수보단 이제품이 저희집에 맞다고 하셔서 선택했습니다.이게 눈으로 보이는게 없으니 좋겠다 싶긴한데..가끔 되긴할까 싶었는데 아이가 근처에서 먼지를 이르키니 조용히 열일하고 있다는걸 알게되었어요..좋은제품싸게 사서 좋아요<br/><br/><span onClick="f_rev_detail('20241113-112449')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">임*희</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">똑똑한 공기청정기                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.30</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">스마트운전기능실시간으로 우리집 공기패텐을 분석하고 학습하면서 미리예측하고 청정해주는 똑똑한 공기청정기엘지공청만큼 이쁜 쿠쿠공기청정기정말 잘샀어요... <br/><br/><span onClick="f_rev_detail('20241113-112445')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">김*연</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">사이즈가 생각보다 커서 놀랬어요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.30</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">고민끝에 구매했는데 디자인도 이쁘고 공기청정 기능도 잘 되서 좋아요그나마 요즘은 미세먼지 가 많이지 않아서 공기청정기 쓸일이 많이 없어 안쓸까하다가 바이러스에집안에만 있는 아이들위해 구매했습니다.집안에서 애들이 뛰거나 음식하면 바로 달라지네요...좀더 써봐야겟지만 현재로썬 넘 만족중입니다.<br/><br/><span onClick="f_rev_detail('20241113-112438')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">이*화</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">좋아요~~                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.30</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">공기청정기 너무 맘에듭니다.잘선택해서 잘쓰고있습니다.좋은제품추천 감사합니다<br/><br/><span onClick="f_rev_detail('20241113-112429')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">유*환</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">잘 사용하고 있습니다                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span>
+      </div>
+      <div >
+        <p class="dcText">타워형공기청정기 렌탈해서 잘 사용하고 있습니다 <br/><br/><span onClick="f_rev_detail('20241113-112414')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">왕*현</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">거실이 환해졌어요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">부피가 크다해서 걱정했는데..걱정할게아니였네요거실 한부분에 자리잡고있으니 오히려 멋쪄보이네요음성알림기능에 타이머 기능까지 좋네요아직 타이머는 사용하지않았지만..편리한 기능같습니다.<br/><br/><span onClick="f_rev_detail('20241113-112412')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">박*숙</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">맘에 쏙듭니다.                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">상담만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">추가렌탈</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">지인소개</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제휴카드</span>
+      </div>
+      <div >
+        <p class="dcText">모두다 만족합니다.같이 구매한 정수기도 공기청정기도 정말 맘에 쏙듭니다.잘쓸게요 감사합니다.<br/><br/><span onClick="f_rev_detail('20241113-112411')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">류*원</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">지인에게 추천하고있어요                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">이가격이 이좋은 공기청정기를 살수있어좋네요..선택잘해서 좋은 공기청정기 얻게되었네요..지인들에게도 추천하고있습니다.<br/><br/><span onClick="f_rev_detail('20241113-112408')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+    <li>
+    <p style="width:80px;height:75px;background:#eee;border-radius: 50px;line-height:75px;text-align:center;margin-right:20px;margin-bottom:135px;">백*영</p>
+    <div class="dcReviewCon">
+      <p style="padding:10px 0;">좋아요~                  </p>
+      <p class="dcStarScore" style="float:left;margin-right:10px;">
+                <span class="dcIcoStar5"></span>아주좋아요
+              </p>
+      <p style="margin-bottom:10px;">
+        <span class="pc_wr_regist_dt_wrap">작성일 : 2026.10.29</span>
+
+
+        
+      </p>
+            <div style="margin-bottom:10px;text-align:left">
+
+        <span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">제품만족</span><span style="padding:2px 3px;margin-right:2px;border: 1px solid #79a6ea;color:#79a6ea;font-size:11px;border-radius: 5px;">빠른설치</span>
+      </div>
+      <div >
+        <p class="dcText">공기청정기 구매했어요..잘되고좋아요<br/><br/><span onClick="f_rev_detail('20241113-112407')" style="background:red;color:#fff;border-radius: 5px;padding:5px;cursor: pointer;">+ 더보기</span></p>
+              </div>
+    </div>
+    <div class="dcThumb">
+          </div>
+  </li>
+  </ul>
+<style>
+.pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
+.pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
+</style>
+<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">&lt;</a><a href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">1</a><a href="/user/product_detail/run/page/2" onclick="f_rev_list(2);return false;">2</a><span class='dcSelectStep'>3</span><a href="/user/product_detail/run/page/4" onclick="f_rev_list(4);return false;">4</a><a href="/user/product_detail/run/page/5" onclick="f_rev_list(5);return false;">5</a><a id="pg_next"href="/user/product_detail/run/page/4"  onclick="f_rev_list(4);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/5"  onclick="f_rev_list(5);return false;">&raquo;</a></div>
+

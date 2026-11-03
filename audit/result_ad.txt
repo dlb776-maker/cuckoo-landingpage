@@ -1,0 +1,4 @@
+full/site_data/file/notice/2022/03/1648713293_LvyRnPZU_EBAA85ED92.jpg | "다이렉트몰을 통해 렌탈하신 모든 고객님께..." (seller name 다이렉트몰) + winner phone "010-8***-2***" | ~930px (다이렉트몰), ~1320px (phone) | no
+full/modules/user/img/skin01/shop/tasa_130_10.jpg | "1588-1588" + QR codes on the sample product label photo | ~290-510px (label thumbnail, x~140-270) | no
+full/modules/user/img/skin01/sub/B2B_Title.jpg | "다이렉트 B2B 렌탈 견적" | middle (~150px) | no
+full/modules/user/img/skin01/shop/event_title_banner.jpg | "다이렉트 렌탈 고객만을 위한 알뜰 TIP!" | middle (~65px) | yes

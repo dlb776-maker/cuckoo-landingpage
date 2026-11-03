@@ -1,0 +1,1263 @@
+if (typeof(COMMON_JS) == 'undefined')
+{
+	//if (typeof rt_path == 'undefined')
+  // alert('rt_path 변수가 선언되지 않았습니다.');
+
+  var COMMON_JS = true;
+
+  function win_open(url, name, option)
+  {
+    var popup = window.open(url, name, option);
+    popup.focus();
+  }
+
+  // 쪽지 창
+  function win_memo(url)
+  {
+    if (!url)
+    {
+      url = "/memo";
+    }
+    win_open(url, "winMemo", "left=50,top=50,width=616,height=460,scrollbars=1");
+  }
+
+  // 자기소개 창
+  function win_profile(mb_id)
+  {
+     win_open("/mb_profile/qry/"+mb_id, 'winProfile', 'left=50,top=50,width=400,height=500,scrollbars=1');
+  }
+
+  // 우편번호 창
+  function win_zip(frm_name, frm_zip1, frm_zip2, frm_addr1, frm_addr2)
+  {
+    url = "/zip/qry/"+frm_name+"/"+frm_zip1+"/"+frm_zip2+"/"+frm_addr1+"/"+frm_addr2;
+    win_open(url, "winZip", "left=50,top=50,width=616,height=460,scrollbars=1");
+  }
+
+	// POST 전송, 결과값 리턴
+  function post_del(href, parm, del)
+  {
+    if (!del || confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?"))
+    {
+      $.post(href, parm, function(req)
+      {
+        document.write(req);
+      });
+    }
+  }
+
+	// url 이동
+  function goto_url(href)
+  {
+    document.location.href = href;
+  }
+
+
+	// POST 전송, 결과값 리턴
+  function post_send(href, parm, del)
+  {
+    if (!del || confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?"))
+    {
+      $.post( href, parm, function(req)
+      {
+        document.write(req);
+      });
+    }
+  }
+
+  // POST 이동
+  function post_goto(url, parm, target)
+  {
+    $('#tmp_from').remove();
+    var f = document.createElement('form');
+
+    var objs, value;
+    for (var key in parm)
+    {
+      value = parm[key];
+      objs = document.createElement('input');
+      objs.setAttribute('type', 'hidden');
+      objs.setAttribute('name', key);
+      objs.setAttribute('value', value);
+      f.appendChild(objs);
+    }
+
+    if (target)
+    {
+      f.setAttribute('target', target);
+    }
+
+    f.setAttribute('method', 'post');
+    f.setAttribute('action', url);
+    f.setAttribute('id', 'tmp_from');
+    document.body.appendChild(f);
+    f.submit();
+    $('#tmp_from').remove();
+  }
+
+  // POST 창
+  function post_win(name, url, parm, opt)
+  {
+    var temp_win = window.open('', name, opt);
+    post_goto(url, parm, name);
+  }
+
+	// 일반 삭제 검사 확인
+  function del(href)
+  {
+    if(confirm("한번 삭제한 자료는 복구할 방법이 없습니다.\n\n정말 삭제하시겠습니까?"))
+    {
+      document.location.href = href;
+    }
+  }
+
+	// 플래시에 변수 추가 fh
+	function flash_movie(src, ids, width, height, wmode, fh)
+  {
+    var wh = "";
+    if (parseInt(width) && parseInt(height))
+    {
+      wh = " width='"+width+"' height='"+height+"' ";
+    }
+    return "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0' "+wh+" id="+ids+"><param name=wmode value="+wmode+"><param name=movie value="+src+"><param name=quality value=high><param name=flashvars value="+fh+"><embed src="+src+" quality=high wmode="+wmode+" flashvars="+fh+" type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?p1_prod_version=shockwaveflash' "+wh+"></embed></object>";
+  }
+
+	// 동영상 파일
+  function obj_movie(src, ids, width, height, autostart)
+  {
+    var wh = "";
+    if (parseInt(width) && parseInt(height))
+    {
+      wh = " width='"+width+"' height='"+height+"' ";
+    }
+    if (!autostart) autostart = false;
+    return "<embed src='"+src+"' "+wh+" autostart='"+autostart+"'></embed>";
+  }
+
+	// 아이프레임 높이 자동조절
+	function reSize(obj)
+  {
+		try
+    {
+			var objBody = frames[obj].document.body;
+			var objFrame = document.getElementById(obj);
+			ifrmHeight = objBody.scrollHeight + (objBody.offsetHeight - objBody.clientHeight);
+			objFrame.style.height = ifrmHeight;
+		}
+		catch(e) {}
+	}
+
+  // url encodeing
+	function sEncode(val)
+  {
+		return encodeURIComponent(val).replace(/%/g, '.');
+	}
+
+  // trim
+  function trim(s)
+  {
+    var t = "";
+    var from_pos = to_pos = 0;
+
+    for (i=0; i<s.length; i++)
+    {
+      if (s.charAt(i) == ' ')
+      {
+        continue;
+      }
+      else
+      {
+        from_pos = i;
+        break;
+      }
+    }
+
+    for (i=s.length; i>=0; i--)
+    {
+      if (s.charAt(i-1) == ' ')
+      {
+        continue;
+      }
+      else
+      {
+        to_pos = i;
+        break;
+      }
+    }
+
+    t = s.substring(from_pos, to_pos);
+    return t;
+  }
+
+  // trim
+  function sTrim(str)
+  {
+    str = str.replace(/(^\s*)|(\s*$)/gi, "");
+    return str;
+  }
+
+  // rtrim
+  function srTrim(str)
+  {
+    str = str.replace(/\s+$/, "");
+    return str;
+  }
+
+  // ltrim
+  function slTrim(str)
+  {
+    str = str.replace(/^\s+/, "");
+    return str;
+  }
+
+  // script 에서 js 파일 로드
+  function importScript(FILES)
+  {
+    var _importScript = function(filename)
+    {
+      if (filename)
+      {
+        document.write('<script type="text/javascript" src="'+rt_path+'/js/'+filename+'.js"></s'+'cript>');
+      }
+    };
+
+    for (var i=0; i<FILES.length; i++)
+    {
+      _importScript(FILES[i]);
+    }
+  }
+
+  // jQuery textarea
+  function txresize(tx, type, size) {
+      var tx = $('#'+tx);
+      if (type == 1)
+          tx.animate({'height':'-='+size+'px'}, 'fast');
+      else if (type == 2)
+          tx.animate({'height':size}, 'fast');
+      else if (type == 3)
+          tx.animate({'height':'+='+size+'px'}, 'fast');
+  }
+
+	// 팝업 닫기
+	function popup_close(id, onday)
+  {
+		if (onday)
+    {
+			var today = new Date();
+			today.setTime(today.getTime() + (60*60*1000*24));
+			document.cookie = id + "=" + escape( true ) + "; path=/; expires=" + today.toGMTString() + ";";
+		}
+
+		if (window.parent.name.indexOf(id) != -1)
+			window.close();
+		else
+			document.getElementById(id).style.display = 'none';
+	}
+
+  // 일반팝업창닫기 2013-10-30 강대인
+  function win_pop_close()
+  {
+    // 팝업창이 아닐경우 닫기
+    //if(typeof(window.opener) != "object" || window.opener == null)
+    //{
+    //  window.open('about:blank','_self').close();
+    //}
+
+    var nvua = navigator.userAgent;
+    if (nvua.indexOf('MSIE') >= 0)
+    {
+      if(nvua.indexOf('MSIE 5.0') == -1)
+      {
+        top.opener = '';
+      }
+    }
+    else if (nvua.indexOf('Gecko') >= 0)
+    {
+      top.name = 'CLOSE_WINDOW';
+      wid = window.open('','CLOSE_WINDOW');
+    }
+
+    top.close();
+
+  }
+
+
+  // md5 incodeing
+  function md5 (str) {
+    // http://kevin.vanzonneveld.net
+    // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)
+    // + namespaced by: Michael White (http://getsprink.com)
+    // +    tweaked by: Jack
+    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +      input by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // -    depends on: utf8_encode
+    // *     example 1: md5('Kevin van Zonneveld');
+    // *     returns 1: '6e658d4bfcb59cc13f96c14450ac40b9'
+    var xl;
+
+    var rotateLeft = function (lValue, iShiftBits) {
+      return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
+    };
+
+    var addUnsigned = function (lX, lY) {
+      var lX4, lY4, lX8, lY8, lResult;
+      lX8 = (lX & 0x80000000);
+      lY8 = (lY & 0x80000000);
+      lX4 = (lX & 0x40000000);
+      lY4 = (lY & 0x40000000);
+      lResult = (lX & 0x3FFFFFFF) + (lY & 0x3FFFFFFF);
+      if (lX4 & lY4) {
+        return (lResult ^ 0x80000000 ^ lX8 ^ lY8);
+      }
+      if (lX4 | lY4) {
+        if (lResult & 0x40000000) {
+          return (lResult ^ 0xC0000000 ^ lX8 ^ lY8);
+        } else {
+          return (lResult ^ 0x40000000 ^ lX8 ^ lY8);
+        }
+      } else {
+        return (lResult ^ lX8 ^ lY8);
+      }
+    };
+
+    var _F = function (x, y, z) {
+      return (x & y) | ((~x) & z);
+    };
+    var _G = function (x, y, z) {
+      return (x & z) | (y & (~z));
+    };
+    var _H = function (x, y, z) {
+      return (x ^ y ^ z);
+    };
+    var _I = function (x, y, z) {
+      return (y ^ (x | (~z)));
+    };
+
+    var _FF = function (a, b, c, d, x, s, ac) {
+      a = addUnsigned(a, addUnsigned(addUnsigned(_F(b, c, d), x), ac));
+      return addUnsigned(rotateLeft(a, s), b);
+    };
+
+    var _GG = function (a, b, c, d, x, s, ac) {
+      a = addUnsigned(a, addUnsigned(addUnsigned(_G(b, c, d), x), ac));
+      return addUnsigned(rotateLeft(a, s), b);
+    };
+
+    var _HH = function (a, b, c, d, x, s, ac) {
+      a = addUnsigned(a, addUnsigned(addUnsigned(_H(b, c, d), x), ac));
+      return addUnsigned(rotateLeft(a, s), b);
+    };
+
+    var _II = function (a, b, c, d, x, s, ac) {
+      a = addUnsigned(a, addUnsigned(addUnsigned(_I(b, c, d), x), ac));
+      return addUnsigned(rotateLeft(a, s), b);
+    };
+
+    var convertToWordArray = function (str) {
+      var lWordCount;
+      var lMessageLength = str.length;
+      var lNumberOfWords_temp1 = lMessageLength + 8;
+      var lNumberOfWords_temp2 = (lNumberOfWords_temp1 - (lNumberOfWords_temp1 % 64)) / 64;
+      var lNumberOfWords = (lNumberOfWords_temp2 + 1) * 16;
+      var lWordArray = new Array(lNumberOfWords - 1);
+      var lBytePosition = 0;
+      var lByteCount = 0;
+      while (lByteCount < lMessageLength) {
+        lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+        lBytePosition = (lByteCount % 4) * 8;
+        lWordArray[lWordCount] = (lWordArray[lWordCount] | (str.charCodeAt(lByteCount) << lBytePosition));
+        lByteCount++;
+      }
+      lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+      lBytePosition = (lByteCount % 4) * 8;
+      lWordArray[lWordCount] = lWordArray[lWordCount] | (0x80 << lBytePosition);
+      lWordArray[lNumberOfWords - 2] = lMessageLength << 3;
+      lWordArray[lNumberOfWords - 1] = lMessageLength >>> 29;
+      return lWordArray;
+    };
+
+    var wordToHex = function (lValue) {
+      var wordToHexValue = "",
+        wordToHexValue_temp = "",
+        lByte, lCount;
+      for (lCount = 0; lCount <= 3; lCount++) {
+        lByte = (lValue >>> (lCount * 8)) & 255;
+        wordToHexValue_temp = "0" + lByte.toString(16);
+        wordToHexValue = wordToHexValue + wordToHexValue_temp.substr(wordToHexValue_temp.length - 2, 2);
+      }
+      return wordToHexValue;
+    };
+
+    var x = [],
+      k, AA, BB, CC, DD, a, b, c, d, S11 = 7,
+      S12 = 12,
+      S13 = 17,
+      S14 = 22,
+      S21 = 5,
+      S22 = 9,
+      S23 = 14,
+      S24 = 20,
+      S31 = 4,
+      S32 = 11,
+      S33 = 16,
+      S34 = 23,
+      S41 = 6,
+      S42 = 10,
+      S43 = 15,
+      S44 = 21;
+
+    str = this.utf8_encode(str);
+    x = convertToWordArray(str);
+    a = 0x67452301;
+    b = 0xEFCDAB89;
+    c = 0x98BADCFE;
+    d = 0x10325476;
+
+    xl = x.length;
+    for (k = 0; k < xl; k += 16) {
+      AA = a;
+      BB = b;
+      CC = c;
+      DD = d;
+      a = _FF(a, b, c, d, x[k + 0], S11, 0xD76AA478);
+      d = _FF(d, a, b, c, x[k + 1], S12, 0xE8C7B756);
+      c = _FF(c, d, a, b, x[k + 2], S13, 0x242070DB);
+      b = _FF(b, c, d, a, x[k + 3], S14, 0xC1BDCEEE);
+      a = _FF(a, b, c, d, x[k + 4], S11, 0xF57C0FAF);
+      d = _FF(d, a, b, c, x[k + 5], S12, 0x4787C62A);
+      c = _FF(c, d, a, b, x[k + 6], S13, 0xA8304613);
+      b = _FF(b, c, d, a, x[k + 7], S14, 0xFD469501);
+      a = _FF(a, b, c, d, x[k + 8], S11, 0x698098D8);
+      d = _FF(d, a, b, c, x[k + 9], S12, 0x8B44F7AF);
+      c = _FF(c, d, a, b, x[k + 10], S13, 0xFFFF5BB1);
+      b = _FF(b, c, d, a, x[k + 11], S14, 0x895CD7BE);
+      a = _FF(a, b, c, d, x[k + 12], S11, 0x6B901122);
+      d = _FF(d, a, b, c, x[k + 13], S12, 0xFD987193);
+      c = _FF(c, d, a, b, x[k + 14], S13, 0xA679438E);
+      b = _FF(b, c, d, a, x[k + 15], S14, 0x49B40821);
+      a = _GG(a, b, c, d, x[k + 1], S21, 0xF61E2562);
+      d = _GG(d, a, b, c, x[k + 6], S22, 0xC040B340);
+      c = _GG(c, d, a, b, x[k + 11], S23, 0x265E5A51);
+      b = _GG(b, c, d, a, x[k + 0], S24, 0xE9B6C7AA);
+      a = _GG(a, b, c, d, x[k + 5], S21, 0xD62F105D);
+      d = _GG(d, a, b, c, x[k + 10], S22, 0x2441453);
+      c = _GG(c, d, a, b, x[k + 15], S23, 0xD8A1E681);
+      b = _GG(b, c, d, a, x[k + 4], S24, 0xE7D3FBC8);
+      a = _GG(a, b, c, d, x[k + 9], S21, 0x21E1CDE6);
+      d = _GG(d, a, b, c, x[k + 14], S22, 0xC33707D6);
+      c = _GG(c, d, a, b, x[k + 3], S23, 0xF4D50D87);
+      b = _GG(b, c, d, a, x[k + 8], S24, 0x455A14ED);
+      a = _GG(a, b, c, d, x[k + 13], S21, 0xA9E3E905);
+      d = _GG(d, a, b, c, x[k + 2], S22, 0xFCEFA3F8);
+      c = _GG(c, d, a, b, x[k + 7], S23, 0x676F02D9);
+      b = _GG(b, c, d, a, x[k + 12], S24, 0x8D2A4C8A);
+      a = _HH(a, b, c, d, x[k + 5], S31, 0xFFFA3942);
+      d = _HH(d, a, b, c, x[k + 8], S32, 0x8771F681);
+      c = _HH(c, d, a, b, x[k + 11], S33, 0x6D9D6122);
+      b = _HH(b, c, d, a, x[k + 14], S34, 0xFDE5380C);
+      a = _HH(a, b, c, d, x[k + 1], S31, 0xA4BEEA44);
+      d = _HH(d, a, b, c, x[k + 4], S32, 0x4BDECFA9);
+      c = _HH(c, d, a, b, x[k + 7], S33, 0xF6BB4B60);
+      b = _HH(b, c, d, a, x[k + 10], S34, 0xBEBFBC70);
+      a = _HH(a, b, c, d, x[k + 13], S31, 0x289B7EC6);
+      d = _HH(d, a, b, c, x[k + 0], S32, 0xEAA127FA);
+      c = _HH(c, d, a, b, x[k + 3], S33, 0xD4EF3085);
+      b = _HH(b, c, d, a, x[k + 6], S34, 0x4881D05);
+      a = _HH(a, b, c, d, x[k + 9], S31, 0xD9D4D039);
+      d = _HH(d, a, b, c, x[k + 12], S32, 0xE6DB99E5);
+      c = _HH(c, d, a, b, x[k + 15], S33, 0x1FA27CF8);
+      b = _HH(b, c, d, a, x[k + 2], S34, 0xC4AC5665);
+      a = _II(a, b, c, d, x[k + 0], S41, 0xF4292244);
+      d = _II(d, a, b, c, x[k + 7], S42, 0x432AFF97);
+      c = _II(c, d, a, b, x[k + 14], S43, 0xAB9423A7);
+      b = _II(b, c, d, a, x[k + 5], S44, 0xFC93A039);
+      a = _II(a, b, c, d, x[k + 12], S41, 0x655B59C3);
+      d = _II(d, a, b, c, x[k + 3], S42, 0x8F0CCC92);
+      c = _II(c, d, a, b, x[k + 10], S43, 0xFFEFF47D);
+      b = _II(b, c, d, a, x[k + 1], S44, 0x85845DD1);
+      a = _II(a, b, c, d, x[k + 8], S41, 0x6FA87E4F);
+      d = _II(d, a, b, c, x[k + 15], S42, 0xFE2CE6E0);
+      c = _II(c, d, a, b, x[k + 6], S43, 0xA3014314);
+      b = _II(b, c, d, a, x[k + 13], S44, 0x4E0811A1);
+      a = _II(a, b, c, d, x[k + 4], S41, 0xF7537E82);
+      d = _II(d, a, b, c, x[k + 11], S42, 0xBD3AF235);
+      c = _II(c, d, a, b, x[k + 2], S43, 0x2AD7D2BB);
+      b = _II(b, c, d, a, x[k + 9], S44, 0xEB86D391);
+      a = addUnsigned(a, AA);
+      b = addUnsigned(b, BB);
+      c = addUnsigned(c, CC);
+      d = addUnsigned(d, DD);
+    }
+
+    var temp = wordToHex(a) + wordToHex(b) + wordToHex(c) + wordToHex(d);
+
+    return temp.toLowerCase();
+  }
+
+  function utf8_encode (argString) {
+    // http://kevin.vanzonneveld.net
+    // +   original by: Webtoolkit.info (http://www.webtoolkit.info/)
+    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +   improved by: sowberry
+    // +    tweaked by: Jack
+    // +   bugfixed by: Onno Marsman
+    // +   improved by: Yves Sucaet
+    // +   bugfixed by: Onno Marsman
+    // +   bugfixed by: Ulrich
+    // +   bugfixed by: Rafal Kukawski
+    // +   improved by: kirilloid
+    // *     example 1: utf8_encode('Kevin van Zonneveld');
+    // *     returns 1: 'Kevin van Zonneveld'
+
+    if (argString === null || typeof argString === "undefined") {
+      return "";
+    }
+
+    var string = (argString + ''); // .replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+    var utftext = '',
+      start, end, stringl = 0;
+
+    start = end = 0;
+    stringl = string.length;
+    for (var n = 0; n < stringl; n++) {
+      var c1 = string.charCodeAt(n);
+      var enc = null;
+
+      if (c1 < 128) {
+        end++;
+      } else if (c1 > 127 && c1 < 2048) {
+        enc = String.fromCharCode((c1 >> 6) | 192, (c1 & 63) | 128);
+      } else {
+        enc = String.fromCharCode((c1 >> 12) | 224, ((c1 >> 6) & 63) | 128, (c1 & 63) | 128);
+      }
+      if (enc !== null) {
+        if (end > start) {
+          utftext += string.slice(start, end);
+        }
+        utftext += enc;
+        start = end = n + 1;
+      }
+    }
+
+    if (end > start) {
+      utftext += string.slice(start, stringl);
+    }
+
+    return utftext;
+  }
+
+  function image_window(img)
+  {
+    var UserAgent = navigator.userAgent;
+    if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+    {
+      // Mobile
+      var title_tx = "";
+      /*
+      $.colorbox(
+      {
+        href:$(img).attr('src'),
+        scalePhotos:false,
+        //iframe:true,
+        fixed:true,
+        top:0,
+        title:title_tx,
+        initialWidth:0,
+        initialHeight:$(window).height(),
+        width:$(window).width(),
+        height:$(window).height(),
+        data:{},
+        closeButton:true,
+        overlayClose:false,
+        scrolling:true,
+        onOpen:function()
+        {
+          //$("#diCon").css("display", "none");
+          $("html").css({"height":"100%", "overflow":"hidden"});
+          history.pushState(null, document.title + '[colorbox-active_img]', window.location.pathname + window.location.search + '#colorbox-active_img');
+          window.onpopstate = function(event) { $.colorbox.close(); };
+        },
+        onClosed:function()
+        {
+          //$("#diCon").css("display", "");
+          $("html").css({"height":"", "overflow":""});
+          history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+        //onComplete : function() { $(this).colorbox.resize({width:$(window).width(), height:$(window).height()}); }
+      });
+      */
+
+      if($(img).data('title'))
+      {
+        title_tx = $(img).data('title');
+      }
+
+      $.colorbox(
+      {
+        iframe:true,
+        href:"/"+rt_module+"/board/img_view?img_url="+ $(img).attr('src'),
+        fixed:true,
+        top:0,
+        title:title_tx,
+        initialWidth:0,
+        initialHeight:$(window).height(),
+        width:$(window).width()-10,
+        height:$(window).height()-10,
+        data:{},
+        closeButton:true,
+        overlayClose:true,
+        scrolling:true,
+        onOpen:function()
+        {
+          $("html").css({"height":"100%", "overflow":"hidden"});
+          history.pushState(null, document.title + '[colorbox-active_img]', window.location.pathname + window.location.search + '#colorbox-active_img');
+          window.onpopstate = function(event) { $.colorbox.close(); };
+        },
+        onClosed:function()
+        {
+          //$("#diCon").css("display", "");
+          $("html").css({"height":"", "overflow":""});
+          history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+      });
+
+    }
+    else
+    {
+      //PC
+      //$.colorbox({href:$(img).attr('src'),scalePhotos:false,maxWidth:'90%',maxHeight:'90%',title:false,closeButton:true});
+
+      $.colorbox(
+      {
+        iframe:true,
+        href:"/"+rt_module+"/board/img_view?img_url="+ $(img).attr('src'),
+        width:'1200',
+        height:'800',
+        maxWidth:"98%",
+        maxHeight:'90%',
+        data:{},
+        closeButton:true,
+        overlayClose:true,
+        scrolling:true
+        //onOpen:function() { $("body").css("overflow", "hidden"); },
+        //onClosed:function() { $("body").css("overflow", "auto"); }
+      });
+    }
+
+
+
+    /*
+    var newImg = new Image();
+    newImg.src = img.src
+
+    newImg.onload = function()
+    {
+      w = this.width;
+      h = this.height;
+
+      var winl = (screen.width-w)/2;
+      var wint = (screen.height-h)/3;
+      var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
+
+      if (w >= screen.width) {
+          winl = 0;
+          h = (parseInt)(w * (h / w));
+      }
+
+      if (h >= screen.height) {
+          wint = 0;
+          w = (parseInt)(h * (w / h));
+      }
+
+      var js_url = "<script type='text/javascript'> \n";
+          js_url += "<!-- \n";
+          js_url += "var ie=document.all; \n";
+          js_url += "var nn6=document.getElementById&&!document.all; \n";
+          js_url += "var isdrag=false; \n";
+          js_url += "var x,y; \n";
+          js_url += "var dobj; \n";
+          js_url += "function movemouse(e) \n";
+          js_url += "{ \n";
+          js_url += "  if (isdrag) \n";
+          js_url += "  { \n";
+          js_url += "    dobj.style.left = nn6 ? tx + e.clientX - x : tx + event.clientX - x; \n";
+          js_url += "    dobj.style.top  = nn6 ? ty + e.clientY - y : ty + event.clientY - y; \n";
+          js_url += "    return false; \n";
+          js_url += "  } \n";
+          js_url += "} \n";
+          js_url += "function selectmouse(e) \n";
+          js_url += "{ \n";
+          js_url += "  var fobj      = nn6 ? e.target : event.srcElement; \n";
+          js_url += "  var topelement = nn6 ? 'HTML' : 'BODY'; \n";
+          js_url += "  while (fobj.tagName != topelement && fobj.className != 'dragme') \n";
+          js_url += "  { \n";
+          js_url += "    fobj = nn6 ? fobj.parentNode : fobj.parentElement; \n";
+          js_url += "  } \n";
+          js_url += "  if (fobj.className=='dragme') \n";
+          js_url += "  { \n";
+          js_url += "    isdrag = true; \n";
+          js_url += "    dobj = fobj; \n";
+          js_url += "    tx = parseInt(dobj.style.left+0); \n";
+          js_url += "    ty = parseInt(dobj.style.top+0); \n";
+          js_url += "    x = nn6 ? e.clientX : event.clientX; \n";
+          js_url += "    y = nn6 ? e.clientY : event.clientY; \n";
+          js_url += "    document.onmousemove=movemouse; \n";
+          js_url += "    return false; \n";
+          js_url += "  } \n";
+          js_url += "} \n";
+          js_url += "document.onmousedown=selectmouse; \n";
+          js_url += "document.onmouseup=new Function('isdrag=false'); \n";
+          js_url += "//--> \n";
+          js_url += "</"+"script> \n";
+
+      var settings;
+
+      if (g4_is_gecko) {
+          settings  ='width='+(w+50)+',';
+          settings +='height='+(h+10)+',';
+      } else {
+          settings  ='width='+(w+50)+',';
+          settings +='height='+(h+10)+',';
+      }
+      settings +='top='+wint+',';
+      settings +='left='+winl+',';
+      settings +='scrollbars=no,';
+      settings +='resizable=yes,';
+      settings +='status=no';
+
+
+      win=window.open("","image_window",settings);
+      win.document.open();
+      win.document.write ("<html><head> \n<meta http-equiv='imagetoolbar' CONTENT='no'> \n<meta http-equiv='content-type' content='text/html; charset=utf-8'>\n");
+      var size = "이미지 사이즈 : "+w+" x "+h;
+      win.document.write ("<title>"+size+"</title> \n");
+      if(w >= screen.width || h >= screen.height) {
+          win.document.write (js_url);
+          var click = "ondblclick='window.close();' style='cursor:move' title=' "+size+" \n 이미지 사이즈가 화면보다 큽니다. \n 왼쪽 버튼을 클릭한 후 마우스를 움직여서 보세요. \n 더블 클릭하면 닫혀요. '";
+      }
+      else
+          var click = "onclick='window.close();' style='cursor:pointer' title='클릭하면 닫혀요. '";
+          //var click = "onclick='window.close();' style='cursor:pointer' title=' "+size+" \n 클릭하면 닫혀요. '";
+      win.document.write ("<style>.dragme{position:relative;}</style> \n");
+      win.document.write ("</head> \n");
+      win.document.write ("<body leftmargin=0 topmargin=0 bgcolor=#dddddd style='cursor:arrow;'> \n");
+      win.document.write ("<table width=100% height=100% cellpadding=0 cellspacing=0><tr><td align=center valign=middle><img src='"+img.src+"' width='"+w+"' height='"+h+"' border=0 class='dragme' "+click+"></td></tr></table>");
+      win.document.write ("</body></html>");
+      win.document.close();
+
+      if(parseInt(navigator.appVersion) >= 4){win.window.focus();}
+    }
+    */
+  }
+
+  // object 내용보기 2013-05-23 강대인
+  function dump(arr,level)
+  {
+    var dumped_text = "";
+    if(!level) level = 0;
+
+    //The padding given at the beginning of the line.
+    var level_padding = "";
+    for(var j=0; j < level+1; j++) level_padding += "    ";
+
+    if(typeof(arr) == 'object') { //Array/Hashes/Objects
+      for(var item in arr) {
+        var value = arr[item];
+
+        if(typeof(value) == 'object') { //If it is an array,
+          dumped_text += level_padding + "'" + item + "' ...\n";
+          dumped_text += this.dump(value,level+1);
+        } else {
+          dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+        }
+      }
+    } else { //Stings/Chars/Numbers etc.
+      dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+    }
+    return dumped_text;
+  }
+
+  // 배열 출력 2014-02-17 강대인
+  function dump_arr(obj, doAlert)
+  {
+    var s = '';
+
+    for (var i in obj)
+      s += i+': '+obj[i]+"\n";
+
+    if (doAlert)
+      alert(s);
+    else
+      return s;
+  }
+
+  // 페이스북 등록
+  function goFaceBook()
+  {
+    FB.init({appId:'205036782280', cookie:true, status:true, xfbml:true});
+    FB.ui({
+      method:"feed",
+      name:"[전국] 아웃백립과 CGV 예매권 2매를 한방에 할인!",
+      caption:"http://tmon.co.kr/deal/22006285/101088",
+      description:"아웃백 립+CGV예매권 2매 ",
+      message:"아웃백 립+CGV예매권 2매 ",
+      link:"http://tmon.co.kr/deal/22006285/101088"
+    });
+  }
+
+  function goTwitter()
+  {
+    var href = 'http://twitter.com/share?text=' + encodeURIComponent("[전국] 아웃백립과 CGV 예매권 2매를 한방에 할인!") + ' ' + encodeURIComponent("http://tmon.co.kr/deal/22006285/101088");
+    var a = window.open(href, 'twitter', 'width=466, height=356');
+    if (a)
+    {
+      a.focus();
+    }
+  }
+
+  function goMe2Day()
+  {
+    var href = 'http://me2day.net/posts/new?new_post[body]=' + encodeURIComponent("[전국] 아웃백립과 CGV 예매권 2매를 한방에 할인!") + ' ' + encodeURIComponent("http://tmon.co.kr/deal/22006285/101088") + '&new_post[tags]=' + encodeURIComponent("티몬, 티켓몬스터, TICKET MONSTER");
+    var a = window.open(href, 'me2Day', '');
+    if (a)
+    {
+      a.focus();
+    }
+  }
+
+  function goYozmDaum()
+  {
+    var href = 'http://yozm.daum.net/api/popup/prePost?sourceid=54&link=' + encodeURIComponent("http://tmon.co.kr/deal/22006285/101088") + '&prefix=' + encodeURIComponent("티켓몬스터 > 아웃백+CGV ") + '&parameter=' + encodeURIComponent("아웃백 립+CGV예매권 2매 ");
+    var a = window.open(href, 'yozmSend', 'width=466, height=356');
+    if (a)
+    {
+      a.focus();
+    }
+  }
+
+  // 전화번호 자동 하이픈 입력
+  function isPhoneBox(obj)
+  {
+    obj.value = obj.value.replace(/\-/g,"");
+    obj.select();
+
+    if(!obj.onblur)
+    {
+      obj.onblur = function()
+      {
+        var str= this.value;
+        this.value = autoHypenPhone(str)
+      }
+    }
+  }
+
+  // 전화번호 자동 하이픈 입력 2016-10-31 강대인
+  function autoHypenPhone(str)
+  {
+    str = str.replace(/[^0-9]/g, '');
+    var tmp = '';
+    if( str.length < 4){
+      return str;
+    }else if(str.length < 7){
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3);
+      return tmp;
+    }else if(str.length < 9){
+      tmp += str.substr(0, 4);
+      tmp += '-';
+      tmp += str.substr(4);
+      return tmp;
+    }else if(str.length == 9 && str.substr(0, 2) == "02"){
+      tmp += str.substr(0, 2);
+      tmp += '-';
+      tmp += str.substr(2, 3);
+      tmp += '-';
+      tmp += str.substr(5);
+      return tmp;
+    }else if(str.length == 10 && str.substr(0, 2) == "02"){
+      tmp += str.substr(0, 2);
+      tmp += '-';
+      tmp += str.substr(2, 4);
+      tmp += '-';
+      tmp += str.substr(6);
+      return tmp;
+    }else if(str.length == 11 && (str.substr(0, 4) == "0504" || str.substr(0, 4) == "0507" || str.substr(0, 4) == "0303")){
+      tmp += str.substr(0, 4);
+      tmp += '-';
+      tmp += str.substr(4, 3);
+      tmp += '-';
+      tmp += str.substr(7);
+      return tmp;
+    }else if(str.length < 11){
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 3);
+      tmp += '-';
+      tmp += str.substr(6);
+      return tmp;
+    }else if(str.length < 12){
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 4);
+      tmp += '-';
+      tmp += str.substr(7);
+      return tmp;
+    }else{
+      tmp += str.substr(0, 4);
+      tmp += '-';
+      tmp += str.substr(4, 4);
+      tmp += '-';
+      tmp += str.substr(8);
+      return tmp;
+    }
+    return str;
+  }
+
+  // 휴대폰번호를 입력시 올바른 휴대폰 번호인지 체크  2013-11-26 강대인
+  // 010 만허용하며 중간자리수느느 4자리로 고정 2025-03-21 강대인
+  // 하이픈 필수
+  function hp_chk(pVal)
+  {
+    pVal = pVal.trim();  // 앞뒤 공백 제거
+
+    // 정규식: 010으로 시작, 하이픈 필수, 중간 4자리, 끝 4자리
+    var mobileRegex = /^010-\d{4}-\d{4}$/;
+
+    return mobileRegex.test(pVal);
+  }
+
+  // 전화번호를 입력시 올바른 번호인지 체크  2013-11-26 강대인
+  // 하이픈 필수
+  function tel_chk(pVal)
+  {
+    pVal = pVal.trim();  // 앞뒤 공백 제거
+
+    // 1. 국내 일반전화 (지역번호 + 국번 + 4자리 번호)
+    var landlineRegex = /^(02|0[3-6][1-5]|0[7-9][1-9])-\d{3,4}-\d{4}$/;
+
+    // 2. 전국대표번호 (15XX, 16XX, 18XX + 하이픈 + 4자리)
+    var nationwideRegex = /^(15|16|18)\d{2}-\d{4}$/;
+
+    // 3. 인터넷전화번호 (070-XXXX-XXXX)
+    var internetPhoneRegex = /^070-\d{4}-\d{4}$/;
+
+    // 4. 인터넷팩스번호 (050X-XXX-XXXX 또는 050X-XXXX-XXXX)
+    var internetFaxRegex = /^050[1-9]-\d{3,4}-\d{4}$/;
+
+    // 5. 0303 팩스번호 (0303-XXX-XXXX 또는 0303-XXXX-XXXX) - 하이픈 필수
+    var fax303Regex = /^0303-\d{3,4}-\d{4}$/;
+
+    // 6. 휴대폰 번호 (010-XXXX-XXXX)
+    var mobileRegex = /^010-\d{4}-\d{4}$/;
+
+    return (
+        landlineRegex.test(pVal) ||
+        nationwideRegex.test(pVal) ||
+        internetPhoneRegex.test(pVal) ||
+        internetFaxRegex.test(pVal) ||
+        fax303Regex.test(pVal) ||
+        mobileRegex.test(pVal)
+    );
+  }
+
+  // 테이블의 마지막행 추가 2014-02-17 강대인
+  function table_add_row(table_id, insert_tag)
+  {
+    $("#"+table_id).append(insert_tag);
+  }
+
+  // 테이블 현재행 삭제 2014-02-17 강대인
+  function table_delete_row(obj)
+  {
+    $(obj).parent().remove();
+  }
+
+
+  //
+  function familySite()
+  {
+  // Common
+    var select_root = $('div.select');
+    var select_value = $('.myValue');
+    var select_a = $('div.select>ul>li>a');
+    var select_input = $('div.select>ul>li>input[type=radio]');
+    var select_label = $('div.select>ul>li>label');
+
+    // Radio Default Value
+    $('div.myValue').each(function(){
+      var default_value = $(this).next('.iList').find('input[checked]').next('label').text();
+      $(this).append(default_value);
+    });
+
+    // Line
+    select_value.bind('focusin',function(){$(this).addClass('outLine');});
+    select_value.bind('focusout',function(){$(this).removeClass('outLine');});
+    select_input.bind('focusin',function(){$(this).parents('div.select').children('div.myValue').addClass('outLine');});
+    select_input.bind('focusout',function(){$(this).parents('div.select').children('div.myValue').removeClass('outLine');});
+
+    // Show
+    function show_option(){
+      $(this).parents('div.select:first').toggleClass('open');
+    }
+
+    // Hover
+    function i_hover(){
+      $(this).parents('ul:first').children('li').removeClass('hover');
+      $(this).parents('li:first').toggleClass('hover');
+    }
+
+    // Hide
+    function hide_option(){
+      var t = $(this);
+      setTimeout(function(){
+        t.parents('div.select:first').removeClass('open');
+      }, 1);
+    }
+
+    // Set Input
+    function set_label(){
+      var v = $(this).next('label').text();
+      $(this).parents('ul:first').prev('.myValue').text('').append(v);
+      $(this).parents('ul:first').prev('.myValue').addClass('selected');
+    }
+
+    // Set Anchor
+    function set_anchor(){
+      var v = $(this).text();
+      $(this).parents('ul:first').prev('.myValue').text('').append(v);
+      $(this).parents('ul:first').prev('.myValue').addClass('selected');
+    }
+
+    // Anchor Focus Out
+    $('*:not("div.select a")').focus(function(){
+      $('.aList').parent('.select').removeClass('open');
+    });
+
+    select_value.click(show_option);
+    select_root.find('ul').css('position','absolute');
+    select_root.removeClass('open');
+    select_root.mouseleave(function(){$(this).removeClass('open');});
+    select_a.click(set_anchor).click(hide_option).focus(i_hover).hover(i_hover);
+    select_input.change(set_label).focus(set_label);
+    select_label.hover(i_hover).click(hide_option);
+
+    // Form Reset
+    $('input[type="reset"], button[type="reset"]').click(function(){
+      $(this).parents('form:first').find('.myValue').each(function(){
+        var origin = $(this).next('ul:first').find('li:first label').text();
+        $(this).text(origin).removeClass('selected');
+      });
+    });
+
+  }
+
+  // 비밀번호체크 함수 1 2015-09-01
+  function f_chk_pwd1(uid, upw)
+  {
+    if(!/^[a-zA-Z0-9]{8,30}$/.test(upw))
+    {
+      alert('비밀번호는 숫자와 영문자 조합으로 8~16자리를 사용해야 합니다.');
+      return false;
+    }
+
+    var chk_num = upw.search(/[0-9]/g);
+    var chk_eng = upw.search(/[a-z]/ig);
+
+    if(chk_num < 0 || chk_eng < 0)
+    {
+      alert('비밀번호는 숫자와 영문자를 혼용하여야 합니다.');
+      return false;
+    }
+
+    if(/(\w)\1\1\1/.test(upw))
+    {
+      alert('비밀번호에 같은 문자를 4번 이상 사용하실 수 없습니다.');
+      return false;
+    }
+
+    if(upw.search(uid)>-1)
+    {
+      alert('ID가 포함된 비밀번호는 사용하실 수 없습니다.');
+      return false;
+    }
+
+    return true;
+  }
+
+  // 비밀번호체크 2 2015-09-01
+  function f_chk_pwd2(uid, upw)
+  {
+    if(upw.value.length < 8)
+    {
+      alert("비밀번호는 문자, 숫자, 특수문자의 조합으로 8~16자리로 입력해주세요.");
+      return false;
+    }
+
+    if(!upw.value.match(/([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9])/))
+    {
+      alert("비밀번호는 문자, 숫자, 특수문자의 조합으로 8~16자리로 입력해주세요.");
+      return false;
+    }
+
+    if(uid.value.indexOf(upw) > -1)
+    {
+      alert("비밀번호에 아이디를 사용할 수 없습니다.");
+      return false;
+    }
+
+    var SamePass_0 = 0; //동일문자 카운트
+    var SamePass_1 = 0; //연속성(+) 카운드
+    var SamePass_2 = 0; //연속성(-) 카운드
+
+    var chr_pass_0;
+    var chr_pass_1;
+
+    for(var i=0; i < upw.value.length; i++)
+    {
+      chr_pass_0 = upw.value.charAt(i);
+      chr_pass_1 = upw.value.charAt(i+1);
+
+      //동일문자 카운트
+      if(chr_pass_0 == chr_pass_1)
+      {
+        SamePass_0 = SamePass_0 + 1
+      }
+
+
+      //연속성(+) 카운드
+      if(chr_pass_0.charCodeAt(0) - chr_pass_1.charCodeAt(0) == 1)
+      {
+        SamePass_1 = SamePass_1 + 1
+      }
+
+      //연속성(-) 카운드
+      if(chr_pass_0.charCodeAt(0) - chr_pass_1.charCodeAt(0) == -1)
+      {
+        SamePass_2 = SamePass_2 + 1
+      }
+    }
+
+    if(SamePass_0 > 1)
+    {
+      alert("동일문자를 3번 이상 사용할 수 없습니다.");
+      return false;
+    }
+
+    if(SamePass_1 > 1 || SamePass_2 > 1 )
+    {
+      alert("연속된 문자열(123 또는 321, abc, cba 등)을\n 3자 이상 사용 할 수 없습니다.");
+      return false;
+    }
+
+    return true;
+  }
+
+  // 팝업차단체크 2017-06-06 강대인
+  function f_popup_chk()
+  {
+    var win_pop_chk = window.open('', 'win', 'width=1, height=1, scrollbars=yes, resizable=yes');
+
+    if (win_pop_chk == null || typeof(win_pop_chk) == "undefined" || (win_pop_chk == null && win_pop_chk.outerWidth == 0) || (win_pop_chk != null && win_pop_chk.outerHeight == 0) || win_pop_chk.test == "undefined")
+    {
+      alert("팝업 차단 기능이 설정되어있습니다\n\n차단 기능을 해제(팝업허용) 한 후 다시 이용해 주십시오.");
+      if(win_pop_chk) {win_pop_chk.close();}
+      return false;
+    }
+
+    if(win_pop_chk) {win_pop_chk.close();}
+    return true;
+  }
+
+  // 사업자번호 자동하이픈 입력
+  function autoHypenBizNo(str)
+  {
+    str = str.replace(/[^0-9]/g, '');
+    var tmp = '';
+    if(str.length < 4){
+        return str;
+    }else if(str.length < 7){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3);
+        return tmp;
+    }else{
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 2);
+        tmp += '-';
+        tmp += str.substr(5);
+        return tmp;
+    }
+    return str;
+  }
+
+  // 날자입력용 자동하이픈넣기
+  function autoHypenDate(str)
+  {
+    if( str.length > 10)
+    {
+      str = str.substr(0, 10);
+    }
+
+    var val         = str.replace(/\D/g, '');
+    var original    = str.replace(/\D/g, '').length;
+    var conversion  = '';
+
+    for(i=0;i<2;i++)
+    {
+      if (val.length > 4 && i===0)
+      {
+        conversion += val.substr(0, 4) + '-';
+        val         = val.substr(4);
+      }
+      else if(original>6 && val.length > 2 && i===1)
+      {
+        conversion += val.substr(0, 2) + '-';
+        val         = val.substr(2);
+      }
+    }
+    conversion += val;
+    return conversion;
+  }
+
+  // 즐겨찾기 2019-05-26
+  function f_favorite_add()
+  {
+    //bookmarkURL, bookmarkTitle
+    var bookmarkURL = window.location.href;
+    var bookmarkTitle = document.title;
+    var triggerDefault = false;
+
+    if (window.sidebar && window.sidebar.addPanel)
+    {
+      // Firefox version < 23
+      window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+    }
+    else if ((window.sidebar && (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) || (window.opera && window.print))
+    {
+      // Firefox version >= 23 and Opera Hotlist
+      var $this = $(this);
+      $this.attr('href', bookmarkURL); $this.attr('title', bookmarkTitle);
+      $this.attr('rel', 'sidebar');
+      $this.off(e);
+      triggerDefault = true;
+    }
+    else if (window.external && ('AddFavorite' in window.external))
+    {
+      // IE Favorite
+      window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+    }
+    else
+    {
+      // WebKit - Safari/Chrome
+      alert((navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D 키를 눌러 즐겨찾기에 등록하실 수 있습니다.');
+    }
+    return triggerDefault;
+  }
+
+
+}
+
+
