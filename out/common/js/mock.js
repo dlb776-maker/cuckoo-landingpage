@@ -13,3 +13,13 @@
     return d.promise();
   };
 })(jQuery);
+
+/* Consultation/order popups need the backend; their URL is rewritten to /404, so go there instead of a stuck iframe. */
+jQuery(function ($) {
+  var cb = $.colorbox;
+  if (!cb) return;
+  $.colorbox = $.extend(function (o) {
+    if (o && String(o.href || '').indexOf('/404') === 0) { location.href = '/404'; return; }
+    return cb.apply(this, arguments);
+  }, cb);
+});

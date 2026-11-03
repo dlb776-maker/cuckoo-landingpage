@@ -89,7 +89,7 @@
 #view_nextprev ul li a{color:#666;}
 
 #comment_list { clear:both; margin-top:20px; }
-.comment_reply { background:url(https://www.cuckoo-rentalmall.co.kr/img/board/ico_reply.gif) no-repeat; }
+.comment_reply { background:url(/img/board/ico_reply.gif) no-repeat; }
 .clist { border-top:1px solid #c3c3c3; }
 .clist p.cl_infor { overflow:hidden; height:100%; padding:8px 0 5px 0; border-bottom:1px dotted #eee; }
 .clist span.cl_name { float:left; }

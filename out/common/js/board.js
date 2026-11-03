@@ -24,7 +24,7 @@ if (typeof(BOARD_JS) == 'undefined') {
 		  , popup = window.open('', 'image_window', 'width='+w+', height='+h+', top=20,left=20,scrollbars=yes,status=no,resizable=no');
 
 		popup.document.open();
-		popup.document.write("<html><head><meta http-equiv='content-type' content='text/html; charset=utf-8'>")
+		popup.document.write("<html><head><script>window.kakaoPixel=function(){return new Proxy({},{get:function(){return function(){};}});};window.wcs=new Proxy({},{get:function(){return function(){};}});window.wcs_add={};window.wcs_do=function(){};window.gtag=function(){};</script><meta http-equiv='content-type' content='text/html; charset=utf-8'>")
 		popup.document.write("<style>*{margin:0;padding:0;} body{width:"+w+"px;height:"+h+"px;overflow:auto;}</style>");
 		popup.document.write("<title>"+size+"</title></head><body oncontextmenu='return false'>")
 		popup.document.write("<img src=\""+imgsrc+"\" onclick='self.close()' style='cursor:pointer;'>")
