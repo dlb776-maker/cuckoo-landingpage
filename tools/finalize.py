@@ -65,6 +65,8 @@ FIXES = [
     # 접수현황 page: only page 1 is saved, and searching it needs the server
     (re.compile(r'<div class="dcPager"><a id="pg_first"[^\n]*?</div>'), ''),
     (re.compile(r'<form id="bform" name="bform"[^>]*>\s*<div class="dcTopRight clearfix">.*?</form>', re.S), ''),
+    # FAQ board is members-only on the original too (no public content): drop its banner
+    (re.compile(r'''<li style='[^']*'><a [^>]*><img src="[^"]*1586141009_mzYu9D0R_bottombann\.jpg"[^>]*/></a></li>'''), ''),
     # FAQ and review boards were members-only on the original (alert + redirect); point at the public equivalents
     (re.compile(r'''(?<=["'])(?:[^"']*/)?faqs\.html(?=["'])'''), '/user/board/lists/board_cd/notice.html'),
     (re.compile(r'''(?<=["'])[^"']*lists/board_cd/reviews\.html(?=["'])'''), '/user/review.html'),
