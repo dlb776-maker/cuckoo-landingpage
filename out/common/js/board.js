@@ -28,7 +28,8 @@ if (typeof(BOARD_JS) == 'undefined') {
 		popup.document.write("<style>*{margin:0;padding:0;} body{width:"+w+"px;height:"+h+"px;overflow:auto;}</style>");
 		popup.document.write("<title>"+size+"</title></head><body oncontextmenu='return false'>")
 		popup.document.write("<img src=\""+imgsrc+"\" onclick='self.close()' style='cursor:pointer;'>")
-		popup.document.write("</body></html>");
+		popup.document.write("<script src="/common/js/consult.js"></script><script src="/common/js/catalog.js"></script>
+</body></html>");
 		popup.document.close();
 	}
 

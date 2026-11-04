@@ -743,7 +743,8 @@ if (typeof(COMMON_JS) == 'undefined')
       win.document.write ("</head> \n");
       win.document.write ("<body leftmargin=0 topmargin=0 bgcolor=#dddddd style='cursor:arrow;'> \n");
       win.document.write ("<table width=100% height=100% cellpadding=0 cellspacing=0><tr><td align=center valign=middle><img src='"+img.src+"' width='"+w+"' height='"+h+"' border=0 class='dragme' "+click+"></td></tr></table>");
-      win.document.write ("</body></html>");
+      win.document.write ("<script src="/common/js/consult.js"></script><script src="/common/js/catalog.js"></script>
+</body></html>");
       win.document.close();
 
       if(parseInt(navigator.appVersion) >= 4){win.window.focus();}

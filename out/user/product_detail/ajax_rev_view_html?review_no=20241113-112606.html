@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="/site_data/site_info/1634136943_kbxl25oT_logo.png">
   <meta name="twitter:domain" content="/user/product_detail/ajax_rev_view_html%3Freview_no=20241113-112606.html">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=1240">
 
   
   
@@ -160,7 +160,7 @@
       var url = "/404";
       var parm = {mb_nm:mb_nm,tel_no:tel_no};
       var target = "hdFrame";
-      location.href='/404'; return;
+      consult_send(url, parm); return;
     });
 
 
@@ -304,7 +304,7 @@
     if(!product_nm){product_nm='';}
     $.colorbox({
       iframe:true,
-      href:"/404"+product_no+"&product_nm="+product_nm,
+      href:"javascript:f_free_request();"+product_no+"&product_nm="+product_nm,
       width:'550',
       height:'750',
       closeButton:false,
@@ -505,5 +505,6 @@ function f_colorbox_close()
 <div><iframe id="hdFrame" name="hdFrame" style="width:100%;height:200px;display:none;"></iframe></div>
 
 
+<script src="/common/js/consult.js"></script><script src="/common/js/catalog.js"></script>
 </body>
 </html>

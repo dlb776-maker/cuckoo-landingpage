@@ -252,5 +252,5 @@ OK||
 .pull {position:relative; margin: 50px 0; padding: 10px 20px; width:100%; border-radius: 0 10px 10px 10px; background-color: #f7f9fa;font-size:0.8em}
 .pull:after {content:""; position: absolute; top: 0px; left: -20px; border-right: 30px solid #f7f9fa; border-top: 0px solid transparent; border-bottom: 20px solid transparent;}
 </style>
-<div class="dcPager"><a id="pg_first"href="/user/product_detail/run/page/1" onclick="f_rev_list(1);return false;">&laquo;</a><a id="pg_prev"href="/user/product_detail/run/page/7" onclick="f_rev_list(7);return false;">&lt;</a><a href="/user/product_detail/run/page/5" onclick="f_rev_list(5);return false;">5</a><a href="/user/product_detail/run/page/6" onclick="f_rev_list(6);return false;">6</a><a href="/user/product_detail/run/page/7" onclick="f_rev_list(7);return false;">7</a><span class='dcSelectStep'>8</span><a href="/user/product_detail/run/page/9" onclick="f_rev_list(9);return false;">9</a><a href="/user/product_detail/run/page/10" onclick="f_rev_list(10);return false;">10</a><a id="pg_next"href="/user/product_detail/run/page/9"  onclick="f_rev_list(9);return false;">&gt;</a><a id="pg_last"href="/user/product_detail/run/page/25"  onclick="f_rev_list(25);return false;">&raquo;</a></div>
+
 

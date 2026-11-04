@@ -7,7 +7,7 @@ SITE = 'https://www.cuckoo-rentalmall.co.kr'
 PHONE = '070-8652-7471'
 
 # Pages/endpoints that need the original backend
-BLOCK = re.compile(r"^/user/(sub3010|sub3011|login|logout|join|member|main/edit_request|cs_review|product_search|product_detail/(ajax_mms_send|ajax_rev_date_change|ajax_rev_input_html|ajax_ord_input_html)|prod_sms|.*ajsx|admin)|^/admin|^/user/sub4020/|^/user/sub4015/")
+BLOCK = re.compile(r"^/user/(sub3011/|login|logout|join|member|main/edit_request|cs_review|product_search|product_detail/(ajax_mms_send|ajax_rev_date_change|ajax_rev_input_html|ajax_ord_input_html)|prod_sms|.*ajsx|admin)|^/admin|^/user/sub4020/|^/user/sub4015/")
 
 FOOTER = '''<p class="dcAddr02">
               주식회사 파이브스톤 &nbsp; / &nbsp; 06568 &nbsp; 서울 서초구 동광로12가길 3 5층 (방배동, 인재빌딩)<br/>
@@ -44,6 +44,37 @@ TEXT = [
     ('328, Imbangul-daero, Gwangsan-gu, Gwangju, Republic of Korea', '서울 서초구 동광로12가길 3 5층 (방배동, 인재빌딩)'),
 ]
 
+# Cuckoo certification review fixes
+FIXES = [
+    # banners that pointed at the wrong place
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1586232128_TkcRGBHg_05\.jpg")'), 'href="/user/sub4015.html"'),  # 영업점 모집
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1694051088_Mz6lxsE4_1main\.jpg")'), 'href="/user/product_detail%3Fproduct_no=202209-1126.html"'),  # STEAM 100
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1694152758_CE1QylzL_5main\.jpg")'), 'href="/user/product_list/run/category_no/1410.html"'),  # 인덕션
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1586144459_fBxO0UnJ_topbanner0\.jpg")'), 'href="/user/product_list/run/category_no/23.html"'),  # 쿠쿠 패키지
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1586224098_OKiyfTdS_eventbanne\.jpg")'), 'href="/user/product_list/run/category_no/23.html"'),  # 1+1 패키지
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1586141009_ltb4qhWM_bottombann\.jpg")'), 'href="/user/sub4020.html"'),  # 단체 할인
+    (re.compile(r'href="[^"]*"(?=[^>]*>\s*<img src="[^"]*1659081972_L6KNSslv_topbanner1\.jpg")'), 'href="javascript:f_free_request();"'),  # 상담바로신청
+    (re.compile(r'href="javascript:f_free_request\(\);"(?=[^>]*>\s*무료상담 신청현황)'), 'href="/user/sub3011.html"'),
+    (re.compile(r'<li class="dcFixBottom04"><a href="/404"[^>]*>관리자 로그인</a></li>'), ''),
+    # Falomo partnership ended: banner slide and its pager tab
+    (re.compile(r'<li><a [^>]*>\s*<img src="[^"]*1662531938_SdNIYOpc_main05\.jpg"[^>]*/></a></li>'), ''),
+    (re.compile(r"<li><a data-slide-index='4' [^>]*>팔로모고급침대</a></li>"), ''),
+    # KB card may only be shown by Cuckoo HQ: its card block and its tab
+    (re.compile(r'<ul class="card_Wrap">(?:(?!</ul>).)*?렌탈II 국민카드(?:(?!</ul>).)*?</ul>', re.S), ''),
+    (re.compile(r'<ul [^>]*class="card_view">(?:(?!</ul>).)*?렌탈II 국민카드(?:(?!</ul>).)*?</ul>', re.S), ''),
+    # 접수현황 page: only page 1 is saved, and searching it needs the server
+    (re.compile(r'<div class="dcPager"><a id="pg_first"[^\n]*?</div>'), ''),
+    (re.compile(r'<form id="bform" name="bform"[^>]*>\s*<div class="dcTopRight clearfix">.*?</form>', re.S), ''),
+    # FAQ and review boards were members-only on the original (alert + redirect); point at the public equivalents
+    (re.compile(r'''(?<=["'])(?:[^"']*/)?faqs\.html(?=["'])'''), '/user/board/lists/board_cd/notice.html'),
+    (re.compile(r'''(?<=["'])[^"']*lists/board_cd/reviews\.html(?=["'])'''), '/user/review.html'),
+    (re.compile(r"<form name='fsearch'.*?</form>", re.S), ''),  # board search needs the server
+    # shortcut: the original's separate mobile site isn't cloned; phones get the 1200px PC layout scaled to fit
+    (re.compile(r'<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'), '<meta name="viewport" content="width=1240">'),
+    (re.compile(r'무료상담이나 카톡상담을 이용해 주세요'), '무료상담을 이용해 주세요'),
+    (re.compile(r'쿠쿠홈시스은\(는\)'), '주식회사 파이브스톤은(는)'),
+]
+
 def local_path(path):
     """Site path -> file path inside DST (wget naming), or None."""
     p = unquote(path.replace('&amp;', '&')).split('#')[0]
@@ -54,6 +85,8 @@ def local_path(path):
     return None
 
 def href_for(path):
+    if re.match(r'/user/sub3010(?:[/?]|$)', path):
+        return 'javascript:f_free_request();'  # the consultation form (tools/consult.js) replaces the server page
     if BLOCK.search(path):
         return '/404'
     lp = local_path(path)
@@ -114,14 +147,17 @@ def transform(s):
     s = s.replace('"/user/product_detail/ajax_rev_view_html?review_no="+review_no', '"/user/product_detail/ajax_rev_view_html%3Freview_no="+review_no+".html"')
     s = s.replace('"/user/sub5011/detail?gift_no="+gift_no+"&call_type="+call_type', '"/user/sub5011/detail%3Fgift_no="+gift_no+"&call_type="+call_type+".html"')
     s = re.sub(r'(<script[^>]*jquery-1\.10\.2\.js[^>]*></script>)', r'\1<script src="/common/js/mock.js"></script>', s)
-    # forms post via post_goto into a hidden iframe; send the visitor to the 404 page instead
-    s = s.replace('post_goto(url, parm, target);', "location.href='/404'; return;")
+    # forms post via post_goto into a hidden iframe; tools/consult.js forwards them to the owner's sheet instead
+    s = s.replace('post_goto(url, parm, target);', 'consult_send(url, parm); return;')
     s = re.sub(r'(<form[^>]*\baction=)(["\'])[^"\']*\2', r'\1"/404"', s)
     i, j = s.find('<p class="dcAddr02">'), s.find('<p class="dcCopyright">')
     if 0 < i < j:
         s = s[:i] + FOOTER + s[j:]
     for a, b in TEXT:
         s = s.replace(a, b)
+    for a, b in FIXES:
+        s = a.sub(b, s)
+    s = s.replace('</body>', '<script src="/common/js/consult.js"></script><script src="/common/js/catalog.js"></script>\n</body>', 1)
     return s
 
 if os.path.exists(DST):
@@ -143,6 +179,11 @@ os.remove(os.path.join(DST, 'user/review/view'))
 os.remove(os.path.join(DST, 'user/sub4020/edit_btob.html'))  # empty wget artifact
 shutil.copyfile(os.path.join(os.path.dirname(__file__), '404.html'), os.path.join(DST, '404.html'))  # stray wget copy without .html, never linked
 shutil.copyfile(os.path.join(os.path.dirname(__file__), 'mock.js'), os.path.join(DST, 'common/js/mock.js'))
+for js in ('consult.js', 'catalog.js'):
+    shutil.copyfile(os.path.join(os.path.dirname(__file__), js), os.path.join(DST, 'common/js', js))
+# product search results page: a category page whose list catalog.js refills (same folder, so relative paths hold)
+cat = os.path.join(DST, 'user/product_list/run/category_no')
+shutil.copyfile(os.path.join(cat, '10.html'), os.path.join(cat, 'search.html'))
 n = 0
 for d, _, fs in os.walk(DST):
     for f in fs:

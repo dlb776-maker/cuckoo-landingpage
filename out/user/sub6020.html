@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="/site_data/site_info/1634136943_kbxl25oT_logo.png">
   <meta name="twitter:domain" content="/user/sub6020.html">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=1240">
 
   
   
@@ -160,7 +160,7 @@
       var url = "/404";
       var parm = {mb_nm:mb_nm,tel_no:tel_no};
       var target = "hdFrame";
-      location.href='/404'; return;
+      consult_send(url, parm); return;
     });
 
 
@@ -304,7 +304,7 @@
     if(!product_nm){product_nm='';}
     $.colorbox({
       iframe:true,
-      href:"/404"+product_no+"&product_nm="+product_nm,
+      href:"javascript:f_free_request();"+product_no+"&product_nm="+product_nm,
       width:'550',
       height:'750',
       closeButton:false,
@@ -2080,7 +2080,7 @@ jQuery(document).ready(function($) {
     <!-- 상담센터 -->
     <div class="info">
       <div class="title">렌탈 상담센터<strong>070-8652-7471</strong></div>
-      <p>통화량이 많아 전화연결이 안될 시 무료상담이나 카톡상담을 이용해 주세요.</p>
+      <p>통화량이 많아 전화연결이 안될 시 무료상담을 이용해 주세요.</p>
     </div>
     <!-- 상담 신청 폼 (PC 전용) -->
     <form class="consultBar" id="consultBarForm">
@@ -2257,7 +2257,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var url = "/404";
         var parm = { mb_nm: mb_nm, tel_no: tel_no, ft_keyword:ft_keyword };
         var target = "hdFrame";
-        location.href='/404'; return;
+        consult_send(url, parm); return;
       } else {
         console.warn('post_goto()가 정의되어 있지 않습니다. 공통 스크립트(common.js 등)가 이 페이지에 로드됐는지 확인해주세요.');
       }
@@ -2316,7 +2316,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var url = "/404";
         var parm = { mb_nm: mb_nm, tel_no: tel_no, ft_keyword: ft_keyword2 };
         var target = "hdFrame";
-        location.href='/404'; return;
+        consult_send(url, parm); return;
       } else {
         console.warn('post_goto()가 정의되어 있지 않습니다. 공통 스크립트(common.js 등)가 이 페이지에 로드됐는지 확인해주세요.');
       }
@@ -2506,5 +2506,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <div><iframe id="hdFrame" name="hdFrame" style="width:100%;height:200px;display:none;"></iframe></div>
 
 
+<script src="/common/js/consult.js"></script><script src="/common/js/catalog.js"></script>
 </body>
 </html>
