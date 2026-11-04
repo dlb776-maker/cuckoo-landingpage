@@ -71,6 +71,7 @@ FIXES = [
     (re.compile(r'''(?<=["'])(?:[^"']*/)?faqs\.html(?=["'])'''), '/user/board/lists/board_cd/notice.html'),
     (re.compile(r'''(?<=["'])[^"']*lists/board_cd/reviews\.html(?=["'])'''), '/user/review.html'),
     (re.compile(r"<form name='fsearch'.*?</form>", re.S), ''),  # board search needs the server
+    (re.compile(r"<li class='right'><a href='[^']*write/board_cd/[^']*'[^>]*>\s*글쓰기\s*</a></li>"), ''),  # posting needs a login
     # shortcut: the original's separate mobile site isn't cloned; phones get the 1200px PC layout scaled to fit
     (re.compile(r'<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">'), '<meta name="viewport" content="width=1240">'),
     (re.compile(r'무료상담이나 카톡상담을 이용해 주세요'), '무료상담을 이용해 주세요'),
