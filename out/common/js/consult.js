@@ -2,7 +2,7 @@
    Google Apps Script web app (tools/consult_apps_script.gs) that writes a sheet row and mails the owner. */
 (function () {
   // Paste the web app URL from Apps Script "배포 > 새 배포" here, then rebuild. Empty = requests can't be sent yet.
-  var ENDPOINT = '';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzg-aAfi_Gva_ycTvqvN2-RgKMABomqmJXmusilPow0wlaBfUJ_Mtw5rGRgYcF8EKSBew/exec';
   var PHONE = '070-8652-7471';
 
   function product() {
