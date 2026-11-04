@@ -105,6 +105,9 @@ def transform(s):
     s = ROOTREL.sub(fix_url, s)
     # shortcut: files over Vercel's 100MB limit stay on the original host; re-encode them if they must be local
     s = DAON.sub(daon_url, s)
+    # review videos are not deployed (too large for the repo); drop the player and its centring wrapper
+    s = re.sub(r'<div[^>]*>\s*<video\b.*?</video>\s*</div>|<video\b.*?</video>', '', s, flags=re.S)
+    s = re.sub(r"""(<img[^>]*?src=)(["'])[^"']*\.(?:mp4|mov|webm)\2""", r'\1\2data:image/gif;base64,R0lGODlhAQABAAAAACw=\2', s, flags=re.I)
     # nothing may point back at the original site; leftovers become same-path local URLs
     s = re.sub(r'https?://(?:www\.)?cuckoo-rentalmall\.co\.kr(?=/)', '', s)
     # popups load per-id pages by string concat; point them at the saved copies
