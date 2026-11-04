@@ -179,6 +179,8 @@ shutil.copyfile(os.path.join(DST, 'user.html'), os.path.join(DST, 'index.html'))
 shutil.copyfile(os.path.join(DST, 'favicon.ico'), os.path.join(DST, 'favicon.png'))
 os.remove(os.path.join(DST, 'user/review/view'))
 os.remove(os.path.join(DST, 'user/sub4020/edit_btob.html'))  # empty wget artifact
+for f in ('user/board/lists/board_cd/faqs.html', 'user/board/lists/board_cd/reviews.html', 'user/board/write/board_cd/news.html'):
+    os.remove(os.path.join(DST, f))  # members-only on the original: only a login alert + redirect, nothing links here
 shutil.copyfile(os.path.join(os.path.dirname(__file__), '404.html'), os.path.join(DST, '404.html'))  # stray wget copy without .html, never linked
 shutil.copyfile(os.path.join(os.path.dirname(__file__), 'mock.js'), os.path.join(DST, 'common/js/mock.js'))
 for js in ('consult.js', 'catalog.js'):
